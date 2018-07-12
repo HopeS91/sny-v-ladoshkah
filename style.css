@@ -11,16 +11,16 @@ html, body, .container, header {
 }
 
 header {
-	background: url(images/IMG_2401.jpg) top left/cover no-repeat;
+	background: url(images/DSC_6346--2.jpg) top left/cover no-repeat;
 	overflow: hidden;
 }
 
 .site-name {
 	color: #f9f9f9;
-	text-align: right;
+	text-align: left;
 	position: absolute;
 	top: 1em;
-	right: 1em;
+	left: 1em;
 }
 
 .site-name h1, h2 {
@@ -28,7 +28,7 @@ header {
 }
 
 .site-name h1 {
-	font-size: 2em;
+	font-size: 3em;
 }
 
 .site-name h2 {
@@ -39,7 +39,7 @@ header {
 .navbar {
 	position: absolute;
 	top: 2em;
-	left: 1em;
+	right: 1em;
 }
 
 .navbar a {
