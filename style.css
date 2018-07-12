@@ -62,7 +62,16 @@ main {
 	display: inline-block;
 }
 
+.portfolio-icon a {
+	width: 100%;
+	height: 100%;
+}
+
+.portfolio-icon img {
+	width: 100%;
+}
+
 .portfolio-icon h6 {
-	margin: 0;
+	margin: 0 0 1em 0;
 	font-size: 1em;
 }
