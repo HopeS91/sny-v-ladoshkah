@@ -28,7 +28,9 @@ header {
 }
 
 .site-name h1 {
+	font-family: 'Gabriela', serif;
 	font-size: 3em;
+	font-weight: 200;
 }
 
 .site-name h2 {
@@ -46,6 +48,7 @@ header {
 	text-decoration: none;
 	padding: 1em 0.7em;
 	color: #f9f9f9;
+	font-family: 'Gabriela', serif;
 	font-size: 1.2em;
 }
 
