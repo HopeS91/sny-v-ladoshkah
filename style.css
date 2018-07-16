@@ -83,6 +83,7 @@ header {
 }
 
 main {
+	min-height: 100%;
 	padding: 1em;
 }
 
@@ -143,6 +144,8 @@ footer {
 	height: 3.5em;
 	background-color: #c471a3;
 	border-top: 2px solid #af5f8f;
+	position: relative;
+	/*bottom: 0;*/
 }
 
 #contacts p {
