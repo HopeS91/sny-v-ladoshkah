@@ -5,6 +5,11 @@ html, body, .container, #index {
 	padding: 0;
 }
 
+a {
+	text-decoration: none;
+	color: #000;
+}
+
 .container {
 	min-height: 100%;
 	position: relative;
@@ -56,9 +61,7 @@ header {
 }
 
 .navbar a {
-	text-decoration: none;
 	padding: 1em 0.7em;
-	color: #000;
 	font-family: 'Gabriela', serif;
 	font-size: 1.2em;
 }
@@ -73,6 +76,10 @@ header {
 	bottom: 0.2em;
 	right: 1em;
 	cursor: pointer;
+}
+
+#arrow-down:hover {
+	bottom: 0.1em;
 }
 
 main {
