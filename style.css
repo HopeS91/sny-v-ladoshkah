@@ -35,7 +35,7 @@ header {
 	left: 1em;
 }
 
-#index .site-name {
+#index .site-name, #contacts {
 	color: #f9f9f9;
 }
 
@@ -87,10 +87,16 @@ main {
 }
 
 #about {
-	padding: 0.5em 2em 1em 2em
+	margin: 1em 0;
+	padding: 0.5em 2em 1em 2em;
+}
+
+#about p {
+	margin: 0;
 }
 
 #portfolio, #contacts {
+	margin: 1em 0;
 	text-align: center;
 }
 
@@ -113,11 +119,6 @@ main {
 	font-size: 1em;
 }
 
-#contacts p {
-	display: inline;
-	margin: 0 1em;
-}
-
 .photo-album {
 	width: 80%;
 	margin: 0 auto;
@@ -135,4 +136,16 @@ main {
 
 .horizontal {
 	width: 10em;
+}
+
+footer {
+	width: 100%;
+	height: 3.5em;
+	background-color: #c471a3;
+	border-top: 2px solid #af5f8f;
+}
+
+#contacts p {
+	display: inline;
+	padding: 0.1em 1em;
 }
