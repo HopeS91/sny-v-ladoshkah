@@ -35,7 +35,7 @@ header {
 	left: 1em;
 }
 
-#index .site-name, #contacts {
+#index .site-name {
 	color: #f9f9f9;
 }
 
@@ -92,12 +92,18 @@ main {
 }
 
 #about {
-	margin: 1em 0;
-	padding: 0.5em 4em 1em 4em;
+	margin: 0 0 1em 0;
+	padding: 0 4em 1em 4em;
 }
 
 #about p {
 	margin: 0;
+}
+
+#about .first-letter {
+	color: #af5f8f;
+	font-family: 'Marck Script', cursive;
+	font-size: 3em;
 }
 
 #portfolio, #contacts {
@@ -149,10 +155,26 @@ footer {
 	background-color: #c471a3;
 	border-top: 2px solid #af5f8f;
 	position: relative;
-	/*bottom: 0;*/
 }
 
-#contacts p {
-	display: inline;
-	padding: 0.1em 1em;
+#contacts {
+	height: 100%;
+	margin: 0 1em;
+	float: left;
+}
+
+#contacts a {
+	height: 100%;
+	display: inline-block;
+}
+
+#contacts img {
+	height: 33px;
+	margin: 0.7em 0.1em 0.5em 0.1em;
+}
+
+.copyright {
+	margin: 1.2em 1em 1em 1em;
+	color: #E4E4E4;
+	float: right;
 }
