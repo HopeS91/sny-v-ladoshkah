@@ -93,12 +93,12 @@ header {
 
 main {
 	min-height: 100%;
-	padding: 1em;
+	padding: 0 1em 1em 1em;
 }
 
 #about {
 	margin: 0 0 1em 0;
-	padding: 0 4em 1em 4em;
+	padding: 1em 4em;
 }
 
 #about p {
@@ -185,15 +185,18 @@ footer {
 	background-color: #f6f6f6;
 }
 
-.photo-page h3 {
-	margin: 0 0 2em 0;
-	color: #af5f8f;
-}
-
 .photo-album {
 	width: 80%;
 	margin: 0 auto;
 	text-align: center;
+}
+
+.photo-album h3 {
+	margin: 0 0 2em 0;
+	color: #af5f8f;
+	/*font-family: 'Marck Script', cursive;*/
+	font-size: 1.5em;
+	/*text-align: left;*/
 }
 
 .photo-icon {
