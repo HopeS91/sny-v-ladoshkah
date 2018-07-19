@@ -8,6 +8,7 @@ html, body, .container, #index {
 a {
 	text-decoration: none;
 	color: #000;
+	display: inline-block;
 }
 
 .container {
@@ -61,7 +62,7 @@ header {
 
 .navbar {
 	position: absolute;
-	top: 2em;
+	top: 1em;
 	right: 1em;
 }
 
@@ -121,10 +122,6 @@ main {
 	display: inline-block;
 }
 
-.portfolio-icon a {
-	display: inline-block;
-}
-
 .portfolio-icon img {
 	width: 100%;
 }
@@ -150,7 +147,6 @@ footer {
 
 #contacts a {
 	margin: 0.3em 0.1em;
-	display: inline-block;
 	vertical-align: middle;
 }
 
