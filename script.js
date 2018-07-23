@@ -26,7 +26,7 @@ function scrollToAnchor(e) {
 }
 
 function showHideArrowUp() {
-	if (window.pageYOffset > window.innerHeight / 2) arrowUp.style.display = 'inline-block';
+	if (window.pageYOffset > window.innerHeight / 3) arrowUp.style.display = 'inline-block';
 	else if (window.pageYOffset === 0) arrowUp.style.display = 'none';
 }
 
