@@ -1,15 +1,15 @@
-const anchorElements = document.querySelectorAll('[href^="#"]'); //выбираем все ссылки к якорям на странице
-let speed = 1; // скорость прокрутки, может иметь дробное значение
+const anchorElements = document.querySelectorAll('[href^="#"]');
+let speed = 1;
 
 function scrollToAnchor(e) {
-	e.preventDefault(); // отменяем стандартное поведение
+	e.preventDefault();
 
-	let y = window.pageYOffset; // возвращает число пикселей, на которое документ прокручен по оси y
-	let hash = this.href.replace(/[^#]*(.*)/, '$1'); // id элемента, к которому нужно перейти
-	let indent = document.querySelector(hash).getBoundingClientRect().top; // отступ от окна браузера до id
+	let y = window.pageYOffset;
+	let hash = this.href.replace(/[^#]*(.*)/, '$1');
+	let indent = document.querySelector(hash).getBoundingClientRect().top;
 	let start = null;
 
-	requestAnimationFrame(step); // указывает браузеру на то, что вы хотите произвести анимацию, и просит его запланировать перерисовку на следующем кадре анимации
+	requestAnimationFrame(step);
 
 	function step(time) {
 		if (start === null) start = time;
@@ -24,4 +24,4 @@ function scrollToAnchor(e) {
 	}
 }
 
-anchorElements.forEach(anchorElement => anchorElement.addEventListener('click', scrollToAnchor, false)); //по клику на ссылку
+anchorElements.forEach(anchorElement => anchorElement.addEventListener('click', scrollToAnchor));
