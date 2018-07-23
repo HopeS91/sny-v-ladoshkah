@@ -98,6 +98,10 @@ header {
 	bottom: 0.1em;
 }
 
+#arrow-down img {
+	width: 100%;
+}
+
 main {
 	min-height: 100%;
 	padding: 0 1em 1em 1em;
