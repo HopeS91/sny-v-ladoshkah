@@ -204,7 +204,7 @@ footer {
 }
 
 .photo-page {
-	background-color: #f6f6f6;
+	/*background-color: #f6f6f6;*/
 }
 
 .photo-album {
@@ -219,9 +219,9 @@ footer {
 }
 
 .vertical {
-	height: 10em;
+	height: 12em;
 }
 
 .horizontal {
-	width: 10em;
+	width: 12em;
 }
