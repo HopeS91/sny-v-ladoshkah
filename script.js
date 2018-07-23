@@ -1,9 +1,10 @@
 const anchorElements = document.querySelectorAll('[href^="#"]');
-let speed = 1;
+const arrowUp = document.getElementById('arrow-up');
 
 function scrollToAnchor(e) {
 	e.preventDefault();
 
+	let speed = 1;
 	let y = window.pageYOffset;
 	let hash = this.href.replace(/[^#]*(.*)/, '$1');
 	let indent = document.querySelector(hash).getBoundingClientRect().top;
@@ -24,4 +25,10 @@ function scrollToAnchor(e) {
 	}
 }
 
+function showHideArrowUp() {
+	if (window.pageYOffset > window.innerHeight / 2) arrowUp.style.display = 'inline-block';
+	else if (window.pageYOffset === 0) arrowUp.style.display = 'none';
+}
+
 anchorElements.forEach(anchorElement => anchorElement.addEventListener('click', scrollToAnchor));
+window.addEventListener('scroll', showHideArrowUp);

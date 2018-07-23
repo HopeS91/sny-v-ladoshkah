@@ -86,25 +86,41 @@ header {
 	padding-left: 0;
 }
 
-#arrow-down {
-	width: 60px;
-	position: absolute;
-	bottom: 0.2em;
+#arrow-down, #arrow-up {
+	width: 50px;
 	right: 1em;
 	cursor: pointer;
+	transition: all 0.8s;
+}
+
+#arrow-down {
+	position: absolute;
+	bottom: 0.2em;
 }
 
 #arrow-down:hover {
 	bottom: 0.1em;
 }
 
-#arrow-down img {
+#arrow-down img, #arrow-up img {
 	width: 100%;
+}
+
+#arrow-up {
+	position: fixed;
+	bottom: 1.0em;
+	z-index: 1;
+	display: none;
+}
+
+#arrow-up:hover {
+	bottom: 1.1em;
 }
 
 main {
 	min-height: 100%;
 	padding: 0 1em 1em 1em;
+	position: relative;
 }
 
 #about {
