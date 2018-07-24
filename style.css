@@ -108,13 +108,13 @@ header {
 
 #arrow-up {
 	position: fixed;
-	bottom: 0.5em;
+	bottom: 0.8em;
 	z-index: 1;
 	display: none;
 }
 
 #arrow-up:hover {
-	bottom: 0.6em;
+	bottom: 1em;
 }
 
 main {
