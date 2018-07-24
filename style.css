@@ -37,11 +37,11 @@ header {
 }
 
 #index .site-name {
-	color: #f9f9f9; /* Цвет на главной странице */
+	color: #f9f9f9; /* цвет на главной странице */
 }
 
 .photo-page .site-name {
-	color: #af5f8f; /* Цвет на страницах с фотографиями */
+	color: #af5f8f; /* цвет на страницах с фотографиями */
 }
 
 .site-name h1, h2 {
@@ -69,17 +69,18 @@ header {
 
 .navbar a {
 	padding: 1em 0.5em;
-	font-family: 'Marck Script', cursive;
 	font-size: 1.5em;
 }
 
 #index .navbar a {
-	color: #f9f9f9; /* Цвет на главной странице */
+	color: #f9f9f9; /* цвет на главной странице */
+	font-family: 'Marck Script', cursive; /* шрифт на главной странице */
 }
 
 .photo-page .navbar a {
-	color: #af5f8f; /* Цвет на страницах с фотографиями */
-	font-size: 1.4em;
+	color: #af5f8f; /* цвет на страницах с фотографиями */
+	font-size: 1.2em;
+	line-height: 2;
 }
 
 .photo-page .navbar a:nth-child(2) {
@@ -194,7 +195,7 @@ footer {
 }
 
 .photo-album {
-	width: 80%;
+	width: 70%;
 	margin: 0 auto;
 	text-align: center;
 }
