@@ -1,5 +1,8 @@
 const anchorElements = document.querySelectorAll('[href^="#"]');
 const arrowUp = document.getElementById('arrow-up');
+const photoIcons = document.querySelectorAll('.photo-icon');
+const back = document.getElementById('back');
+const close = document.getElementById('close');
 
 function scrollToAnchor(e) {
 	e.preventDefault();
@@ -30,5 +33,15 @@ function showHideArrowUp() {
 	else if (window.pageYOffset === 0) arrowUp.style.display = 'none';
 }
 
+function showPopUpWindow() {
+	back.style.display = 'block';
+}
+
+function hidePopUpWindow() {
+	back.style.display = 'none';
+}
+
 anchorElements.forEach(anchorElement => anchorElement.addEventListener('click', scrollToAnchor));
 window.addEventListener('scroll', showHideArrowUp);
+photoIcons.forEach(photoIcon => photoIcon.addEventListener('click', showPopUpWindow));
+close.addEventListener('click', hidePopUpWindow);
