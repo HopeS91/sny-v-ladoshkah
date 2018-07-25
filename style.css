@@ -216,19 +216,19 @@ footer {
 #back {
 	width: 100%;
 	height: 100%;
-	background-color: rgba(0, 0, 0, 0.3);
-	position: absolute;
+	background-color: rgba(0, 0, 0, 0.8);
+	position: fixed;
 	top: 0;
 	left: 0;
 	z-index: 10;
-	/*display: none;*/
+	display: none;
 }
 
 #front {
-	width: 70%;
-	height: 30em;
+	width: 60%;
+	height: 33em;
 	margin: 5% auto 0 auto;
-	background-color: white;
+	background-color: rgba(0, 0, 0, 0);
 	position: relative;
 	z-index: 20;
 }
@@ -236,7 +236,7 @@ footer {
 #close {
 	width: 1em;
 	height: 1em;
-	color: #000;
+	color: #ccc;
 	font-size: 2em;
 	background-color: rgba(0, 0, 0, 0);
 	border: 0;
@@ -256,10 +256,6 @@ footer {
 	display: none;
 }
 
-#front img:nth-child(2) {
-	display: block;
-}
-
 .slide-v {
 	height: 100%;
 }
@@ -270,19 +266,20 @@ footer {
 
 .prev-slide, .next-slide {
 	padding: 1em 1.2em;
+	color: #ccc;
   font-size: 1.5em;
 	border-radius: 0.3em;
 	cursor: pointer;
 	position: absolute;
-	top: 30%;
+	top: 45%;
 }
 
 .prev-slide {
-	left: 0.8em;
+	left: 1em;
 }
 
 .next-slide {
-	right: 0.8em;
+	right: 1em;
 }
 
 .dots {
@@ -299,8 +296,12 @@ footer {
 	width: 0.5em;
 	height: 0.5em;
 	margin: 0 0.1em;
-	background-color: #000;
+	background-color: #ccc;
 	border-radius: 50%;
 	display: inline-block;
 	vertical-align: middle;
+}
+
+.dot:hover {
+	background-color: #fff;
 }
