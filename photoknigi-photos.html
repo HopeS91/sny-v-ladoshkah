@@ -35,6 +35,29 @@
 					<img src="images/photoknigi/IMG_3326.jpg" alt="Фото 5" class="photo-icon horizontal"></img>
 					<img src="images/photoknigi/IMG_3384.jpg" alt="Фото 6" class="photo-icon horizontal"></img>
 				</div>
+				<!-- слайдер -->
+				<div id="back">
+					<button type="reset" id="close" title="Закрыть">&times;</button>
+					<div id="front">
+						<img src="images/photoknigi/IMG_3221.jpg" alt="Фото 1" class="slide slide-h"></img>
+						<img src="images/photoknigi/IMG_3242.jpg" alt="Фото 2" class="slide slide-h"></img>
+						<img src="images/photoknigi/IMG_3291.jpg" alt="Фото 3" class="slide slide-h"></img>
+						<img src="images/photoknigi/IMG_3318.jpg" alt="Фото 4" class="slide slide-h"></img>
+						<img src="images/photoknigi/IMG_3326.jpg" alt="Фото 5" class="slide slide-h"></img>
+						<img src="images/photoknigi/IMG_3384.jpg" alt="Фото 6" class="slide slide-h"></img>
+					</div>
+					<a class="prev-slide" onclick="moveSlides(-1)">&#10094;</a>
+					<a class="next-slide" onclick="moveSlides(1)">&#10095;</a>
+					<div class="dots">
+						<span onclick="currentSlide(1)" class="dot"></span>
+						<span onclick="currentSlide(2)" class="dot"></span>
+						<span onclick="currentSlide(3)" class="dot"></span>
+						<span onclick="currentSlide(4)" class="dot"></span>
+						<span onclick="currentSlide(5)" class="dot"></span>
+						<span onclick="currentSlide(6)" class="dot"></span>
+					</div>
+				</div>
+				<!-- слайдер -->
 			</main>
 			<footer>
 				<div id="contacts">
