@@ -8,6 +8,8 @@ const prevSlide = document.querySelector('.prev-slide');
 const nextSlide = document.querySelector('.next-slide');
 const closeIcon = document.getElementById('close');
 
+
+
 // автоматическая медленная прокрутка к якорю
 function scrollToAnchor(e) {
 	e.preventDefault();
@@ -33,19 +35,25 @@ function scrollToAnchor(e) {
 	}
 }
 
+
+
 // прятать/показывать стрелку, которая автоматически прокручивает страницу на самый верх
 function showHideArrowUp() {
 	if (window.pageYOffset > window.innerHeight / 3) arrowUp.style.display = 'inline-block';
 	else if (window.pageYOffset === 0) arrowUp.style.display = 'none';
 }
 
+
+
 // по клику на мини-фото показывать слайдер
 let mainSlide = 1;  // индекс активной картинки
 
+// листать на кнопки "назад"/"вперёд"
 function moveSlides(index) {
 	showSlides(mainSlide += index);
 }
 
+// подсвечивать соответствующую активной фотографии точку
 function currentSlide(index) {
 	showSlides(mainSlide = index);
 }
@@ -65,9 +73,11 @@ function showSlides(index) {
 	// ИСПРАВИТЬ НА: окрасить ту, по которой был клик
 	for (let i = 0; i < dots.length; i++) {
 		dots[i].style.backgroundColor = '#ccc';
-		dots[index - 1].style.backgroundColor = '#000';
+		dots[mainSlide - 1].style.backgroundColor = '#000';
 	}
 }
+
+
 
 function hideSlides() {
 	back.style.display = 'none';
