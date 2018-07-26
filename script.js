@@ -1,14 +1,12 @@
 const anchorElements = document.querySelectorAll('[href^="#"]');
 const arrowUp = document.getElementById('arrow-up');
-// const photoAlbum = document.querySelector('.photo-album');
 const photoIcons = document.querySelectorAll('.photo-icon');
 const back = document.getElementById('back');
-const front = document.getElementById('front');
 const slides = document.querySelectorAll('.slide');
 const dots = document.querySelectorAll('.dot');
 const prevSlide = document.querySelector('.prev-slide');
 const nextSlide = document.querySelector('.next-slide');
-const close = document.getElementById('close');
+const closeIcon = document.getElementById('close');
 
 // автоматическая медленная прокрутка к якорю
 function scrollToAnchor(e) {
@@ -44,6 +42,14 @@ function showHideArrowUp() {
 // по клику на мини-фото показывать слайдер
 let mainSlide = 1;  // индекс активной картинки
 
+function moveSlides(index) {
+	showSlides(mainSlide += index);
+}
+
+function currentSlide(index) {
+	showSlides(mainSlide = index);
+}
+
 function showSlides(index) {
 	back.style.display = 'block';
 
@@ -55,15 +61,13 @@ function showSlides(index) {
 		slides[i].style.display = 'none';
 		slides[mainSlide - 1].style.display = 'block';
 	}
-}
 
-function moveSlides(index) {
-	showSlides(mainSlide += index);
+	// ИСПРАВИТЬ НА: окрасить ту, по которой был клик
+	for (let i = 0; i < dots.length; i++) {
+		dots[i].style.backgroundColor = '#ccc';
+		dots[index - 1].style.backgroundColor = '#000';
+	}
 }
-
-// function currentSlide(index) {
-// 	showSlides(mainSlide = index);
-// }
 
 function hideSlides() {
 	back.style.display = 'none';
@@ -72,4 +76,4 @@ function hideSlides() {
 anchorElements.forEach(anchorElement => anchorElement.addEventListener('click', scrollToAnchor));
 window.addEventListener('scroll', showHideArrowUp);
 photoIcons.forEach(photoIcon => photoIcon.addEventListener('click', showSlides));
-close.addEventListener('click', hideSlides);
+closeIcon.addEventListener('click', hideSlides);
