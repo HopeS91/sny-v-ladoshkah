@@ -40,7 +40,7 @@ header {
 	color: #f9f9f9; /* цвет на главной странице */
 }
 
-.photo-page .site-name {
+.photo-header .site-name {
 	color: #af5f8f; /* цвет на страницах с фотографиями */
 }
 
@@ -77,13 +77,13 @@ header {
 	font-family: 'Marck Script', cursive; /* шрифт на главной странице */
 }
 
-.photo-page .navbar a {
+.photo-header .navbar a {
 	color: #af5f8f; /* цвет на страницах с фотографиями */
 	font-size: 1.2em;
 	line-height: 2;
 }
 
-.photo-page .navbar a:nth-child(2) {
+.photo-header .navbar a:nth-child(2) {
 	padding-left: 0;
 }
 
@@ -191,7 +191,7 @@ footer {
 }
 
 .photo-page {
-	/*background-color: #f6f6f6;*/
+	
 }
 
 .photo-album {
