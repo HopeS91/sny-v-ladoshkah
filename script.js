@@ -73,7 +73,7 @@ function showSlides(index) {
 	// ИСПРАВИТЬ НА: окрасить ту, по которой был клик
 	for (let i = 0; i < dots.length; i++) {
 		dots[i].style.backgroundColor = '#ccc';
-		dots[mainSlide - 1].style.backgroundColor = '#000';
+		dots[mainSlide - 1].style.backgroundColor = '#c471a3';
 	}
 }
 

@@ -190,10 +190,6 @@ footer {
 	float: right;
 }
 
-.photo-page {
-	
-}
-
 .photo-album {
 	width: 70%;
 	margin: 0 auto;
@@ -300,8 +296,4 @@ footer {
 	border-radius: 50%;
 	display: inline-block;
 	vertical-align: middle;
-}
-
-.dot:hover {
-	background-color: #000;
 }
