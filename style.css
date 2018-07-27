@@ -155,7 +155,9 @@ main {
 
 .portfolio-icon h6 {
 	margin: 0 0 1em 0;
-	font-size: 1em;
+	color: #af5f8f;
+	font-family: 'Marck Script', cursive;
+	font-size: 1.5em;
 }
 
 footer {
