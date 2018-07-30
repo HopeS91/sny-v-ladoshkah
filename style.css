@@ -25,7 +25,7 @@ header {
 }
 
 #index {
-	background: url(images/DSC_6346--2.jpg) top center/cover no-repeat;
+	background: url(images/DSC_6346--2.jpg) 50% 0%/cover no-repeat;
 	overflow: hidden;
 }
 
@@ -332,14 +332,28 @@ footer {
 	}
 }
 
-@media (max-width: 900px) {
+@media (max-width: 800px) {
+	.container {
+		padding-top: 4em;
+	}
+
+	#index {
+		background-position: 30% 0%;
+	}
+
+	.site-name {
+		top: 5.2em;
+	}
+
 	.navbar {
 		display: none;
 	}
 
 	.dropdown {
 		width: 100%;
-		height: 5em;
+		height: 4em;
+		background-color: #c471a3;
+		border-bottom: 2px solid #af5f8f;
 		display: inline-block;
 		position: absolute;
 		top: 0;
@@ -349,8 +363,8 @@ footer {
 	#burger {
 		width: 2.5em;
 		height: 2em;
-		position: fixed;
-		top: 1.6em;
+		position: absolute;
+		top: 1em;
 		right: 1em;
 		cursor: pointer;
 	}
@@ -359,6 +373,7 @@ footer {
 		display: block;
 		width: 100%;
 		height: 3px;
+		background-color: #f9f9f9;
 		position: absolute;
 		-webkit-transition: 0.5s;
 		-moz-transition: 0.5s;
@@ -379,34 +394,24 @@ footer {
 		bottom: 3px;
 	}
 
-	#index #burger span {
-		background-color: #f9f9f9;
-	}
-
-	#index #burger span {
-		background-color: #f9f9f9;
-	}
-
-	.photo-header #burger span {
-		background-color: #af5f8f;
-	}
-
 	#drop-menu {
 		display: none;
 		width: 100%;
-		padding-top: 5em;
+		padding-top: 4em;
 		position: absolute;
 		z-index: 1;
 	}
 
 	#drop-menu a {
 		text-decoration: none;
+		display: block;
 		padding: 1em;
+		color: #f9f9f9;
 		font-size: 1.2em;
 		font-weight: 400;
 		text-align: center;
-		border: 1px solid #2e2e2e;
-		display: block;
+		background-color: #c471a3;
+		border: 1px solid #af5f8f;
 	}
 
 	.span-one-active {
