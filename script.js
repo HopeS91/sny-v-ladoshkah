@@ -1,5 +1,8 @@
 const anchorElements = document.querySelectorAll('[href^="#"]');
 const arrowUp = document.getElementById('arrow-up');
+const burgerIcon = document.getElementById('burger');
+const burgerSpans = document.querySelectorAll('#burger span');
+const dropdownMenu = document.querySelector('.drop-menu');
 const photoIcons = document.querySelectorAll('.photo-icon');
 const back = document.getElementById('back');
 const slides = document.querySelectorAll('.slide');
@@ -77,13 +80,31 @@ function showSlides(index) {
 	}
 }
 
-
-
+// прятать слайдер
 function hideSlides() {
 	back.style.display = 'none';
 }
 
+
+
+// трансформировать иконку-бургер
+function toggleBurger() {
+	burgerSpans[0].classList.toggle('span-one-active');
+	burgerSpans[2].classList.toggle('span-three-active');
+	setTimeout(function() {
+		burgerSpans[1].classList.toggle('span-two-active');
+	}, 100);
+}
+
+// показать/спрятать dropdown-меню
+function toggleDropdown(event) {
+	toggleBurger();
+
+
+}
+
 anchorElements.forEach(anchorElement => anchorElement.addEventListener('click', scrollToAnchor));
 window.addEventListener('scroll', showHideArrowUp);
+burgerIcon.addEventListener('click', toggleDropdown);
 photoIcons.forEach(photoIcon => photoIcon.addEventListener('click', showSlides));
 closeIcon.addEventListener('click', hideSlides);
