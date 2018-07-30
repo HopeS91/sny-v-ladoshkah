@@ -316,6 +316,10 @@ footer {
 	.navbar a {
 		font-size: 1.3em;
 	}
+
+	.photo-header .navbar a {
+		line-height: 1.7;
+	}
 }
 
 @media (max-width: 900px) {
@@ -330,22 +334,27 @@ footer {
 	.navbar a {
 		font-size: 1.2em;
 	}
+
+	.photo-header .navbar a {
+		font-size: 1.1em;
+		line-height: 1.3;
+	}
 }
 
 @media (max-width: 800px) {
-	.container {
+	/*.container {
 		padding-top: 4em;
-	}
+	}*/
 
 	#index {
 		background-position: 30% 0%;
 	}
 
-	.site-name {
+	#index .site-name {
 		top: 5.2em;
 	}
 
-	.navbar {
+	#index .navbar {
 		display: none;
 	}
 
