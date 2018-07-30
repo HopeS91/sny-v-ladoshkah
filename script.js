@@ -1,8 +1,8 @@
 const anchorElements = document.querySelectorAll('[href^="#"]');
 const arrowUp = document.getElementById('arrow-up');
-const burgerIcon = document.getElementById('burger');
+const dropdown = document.querySelectorAll('.dropdown');
 const burgerSpans = document.querySelectorAll('#burger span');
-const dropdownMenu = document.querySelector('.drop-menu');
+const dropdownMenu = document.getElementById('drop-menu');
 const photoIcons = document.querySelectorAll('.photo-icon');
 const back = document.getElementById('back');
 const slides = document.querySelectorAll('.slide');
@@ -88,23 +88,28 @@ function hideSlides() {
 
 
 // трансформировать иконку-бургер
-function toggleBurger() {
+function toggleBurger(event) {
 	burgerSpans[0].classList.toggle('span-one-active');
 	burgerSpans[2].classList.toggle('span-three-active');
 	setTimeout(function() {
 		burgerSpans[1].classList.toggle('span-two-active');
 	}, 100);
+
+	if (event.target.closest('#burger')) toggleDropdown();
+	else closeDropdown();
 }
 
 // показать/спрятать dropdown-меню
-function toggleDropdown(event) {
-	toggleBurger();
+function toggleDropdown() {
+	dropdownMenu.style.display = 'none' ? 'block' : 'none';
+}
 
-
+function closeDropdown() {
+	dropdownMenu.style.display = 'block' ? 'none' : 'block';
 }
 
 anchorElements.forEach(anchorElement => anchorElement.addEventListener('click', scrollToAnchor));
 window.addEventListener('scroll', showHideArrowUp);
-burgerIcon.addEventListener('click', toggleDropdown);
+dropdown.forEach(element => element.addEventListener('click', toggleBurger));
 photoIcons.forEach(photoIcon => photoIcon.addEventListener('click', showSlides));
 closeIcon.addEventListener('click', hideSlides);

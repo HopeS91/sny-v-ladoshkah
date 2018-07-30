@@ -347,7 +347,6 @@ footer {
 	}
 
 	#burger {
-		display: inline-block;
 		width: 2.5em;
 		height: 2em;
 		position: fixed;
@@ -392,7 +391,7 @@ footer {
 		background-color: #af5f8f;
 	}
 
-	.drop-menu {
+	#drop-menu {
 		display: none;
 		width: 100%;
 		padding-top: 5em;
@@ -400,7 +399,7 @@ footer {
 		z-index: 1;
 	}
 
-	.drop-menu a {
+	#drop-menu a {
 		text-decoration: none;
 		padding: 1em;
 		font-size: 1.2em;
@@ -438,9 +437,5 @@ footer {
 		-ms-transform-origin: 8% 50%;
 		-o-transform-origin: 8% 50%;
 		transform-origin: 8% 50%;
-	}
-
-	.dropdown-active {
-		display: block;
 	}
 }
