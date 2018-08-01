@@ -30,6 +30,7 @@ header {
 }
 
 .site-name {
+	margin-right: 1em;
 	text-align: left;
 	position: absolute;
 	top: 1.2em;
@@ -37,11 +38,7 @@ header {
 }
 
 #index .site-name {
-	color: #f9f9f9; /* цвет на главной странице */
-}
-
-.photo-header .site-name {
-	color: #af5f8f; /* цвет на страницах с фотографиями */
+	color: #f9f9f9;
 }
 
 .site-name h1, h2 {
@@ -62,8 +59,9 @@ header {
 }
 
 .navbar {
+	margin-left: 1em;
+	padding-top: 1em;
 	position: absolute;
-	top: 1em;
 	right: 1em;
 }
 
@@ -73,18 +71,8 @@ header {
 }
 
 #index .navbar a {
-	color: #f9f9f9; /* цвет на главной странице */
-	font-family: 'Marck Script', cursive; /* шрифт на главной странице */
-}
-
-.photo-header .navbar a {
-	color: #af5f8f; /* цвет на страницах с фотографиями */
-	font-size: 1.2em;
-	line-height: 2;
-}
-
-.photo-header .navbar a:nth-child(2) {
-	padding-left: 0;
+	color: #f9f9f9;
+	font-family: 'Marck Script', cursive;
 }
 
 .dropdown {
@@ -195,6 +183,24 @@ footer {
 	color: #fff;
 	font-size: 0.9em;
 	float: right;
+}
+
+.photo-header {
+	position: relative;
+}
+
+.photo-header .site-name {
+	color: #af5f8f;
+}
+
+.photo-header .navbar a {
+	color: #af5f8f;
+	font-size: 1.2em;
+	line-height: 2;
+}
+
+.photo-header .navbar a:nth-child(2) {
+	padding-left: 0;
 }
 
 .photo-album {
@@ -461,6 +467,14 @@ footer {
 	.portfolio-icon {
 		width: 45%;
 	}
+
+	.navbar {
+		bottom: 0.5em;
+	}
+
+	.photo-album {
+		width: 80%;
+	}
 }
 
 @media (max-width: 640px) {
@@ -473,7 +487,28 @@ footer {
 	}
 }
 
-@media (max-width: 400px) {
+@media (max-width: 440px) {
+	.site-name, .navbar {
+		width: 100%;
+		margin: 0 auto;
+		text-align: center;
+		left: 0;
+	}
+
+	.site-name h1 {
+		font-size: 2.5em;
+	}
+
+	.site-name h2 {
+		padding: 0.5em 0 0 0;
+	}
+
+	.navbar a {
+		padding: 0.1em 0.5em;
+		text-align: center;
+		display: block;
+	}
+
 	#contacts, .copyright {
 		width: 100%;
 		margin: 0 auto;
