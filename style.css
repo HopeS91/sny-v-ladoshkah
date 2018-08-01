@@ -166,7 +166,7 @@ main {
 
 footer {
 	width: 100%;
-	height: 3.5em;
+	min-height: 3.5em;
 	background-color: #c471a3;
 	border-top: 2px solid #af5f8f;
 	position: relative;
@@ -191,8 +191,9 @@ footer {
 }
 
 .copyright {
-	margin: 1.2em 1em 1em 1em;
+	margin: 1.3em 1em 1em 1em;
 	color: #fff;
+	font-size: 0.9em;
 	float: right;
 }
 
@@ -451,5 +452,36 @@ footer {
 		-ms-transform-origin: 8% 50%;
 		-o-transform-origin: 8% 50%;
 		transform-origin: 8% 50%;
+	}
+
+	#about {
+		padding: 1em 3em;
+	}
+
+	.portfolio-icon {
+		width: 45%;
+	}
+}
+
+@media (max-width: 640px) {
+	#about {
+		padding: 1em 2em;
+	}
+
+	.portfolio-icon {
+		width: 90%;
+	}
+}
+
+@media (max-width: 400px) {
+	#contacts, .copyright {
+		width: 100%;
+		margin: 0 auto;
+		text-align: center;
+		float: none;
+	}
+
+	.copyright {
+		padding: 0.7em 0;
 	}
 }
