@@ -175,13 +175,13 @@ main {
 #contacts p {
 	margin: 0;
 	padding: 1em;
+	font-size: 1.2em;
 	position: absolute;
 }
 
-/*#contacts span {
-	font-family: 'Marck Script', cursive;
-	font-size: 1.2em;
-}*/
+#contacts span {
+	font-weight: bold;
+}
 
 #contacts a {
 	color: #af5f8f;
@@ -336,7 +336,7 @@ footer {
 	vertical-align: middle;
 }
 
-/* расположение контактов до ширины 641px, а после - в коде ниже */
+/* расположение контактов до ширины 641px (включительно), а после - в коде ниже */
 @media (min-width: 641px) {
 	#contacts p:nth-child(1), #contacts p:nth-child(2) {
 		text-align: left;
@@ -370,6 +370,10 @@ footer {
 		font-size: 1.3em;
 	}
 
+	#contacts {
+		width: 55%;
+	}
+
 	.photo-header .navbar a {
 		line-height: 1.7;
 	}
@@ -389,7 +393,7 @@ footer {
 	}
 
 	#about, #contacts {
-		width: 60%;
+		width: 65%;
 	}
 
 	.photo-album {
@@ -523,7 +527,7 @@ footer {
 	}
 
 	#about, #contacts {
-		width: 70%;
+		width: 75%;
 	}
 
 	.photo-album {
@@ -585,6 +589,10 @@ footer {
 
 	.site-name h1 {
 		font-size: 2.5em;
+	}
+
+	#about, #contacts {
+		width: 90%;
 	}
 
 	.contacts-icons, .copyright {
