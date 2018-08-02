@@ -200,22 +200,15 @@ footer {
 }
 
 .photo-album {
-	width: 70%;
+	width: 50em;
 	margin: 0 auto;
 	text-align: center;
 }
 
 .photo-icon {
+	width: 12em;
 	margin: 0.5em 1em;
 	cursor: pointer;
-}
-
-.vertical {
-	height: 12em;
-}
-
-.horizontal {
-	width: 12em;
 }
 
 #back {
@@ -261,11 +254,11 @@ footer {
 	display: none;
 }
 
-.slide-v {
+.vertical {
 	height: 100%;
 }
 
-.slide-h {
+.horizontal {
 	width: 100%;
 }
 
@@ -336,6 +329,10 @@ footer {
 
 	.navbar a {
 		font-size: 1.2em;
+	}
+
+	.photo-album {
+		width: 90%;
 	}
 
 	.photo-header .navbar a {
