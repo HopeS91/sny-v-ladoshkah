@@ -30,11 +30,11 @@ header {
 }
 
 .site-name {
-	margin-right: 1em;
+	margin: 0 1em;
 	text-align: left;
 	position: absolute;
 	top: 1.2em;
-	left: 1em;
+	left: 0;
 }
 
 #index .site-name {
@@ -53,16 +53,15 @@ header {
 }
 
 .site-name h2 {
-	padding: 0 0 0 0.2em;
 	font-size: 1.2em;
 	font-weight: 100;
 }
 
 .navbar {
-	margin-left: 1em;
-	padding-top: 1em;
+	margin: 0 1em;
 	position: absolute;
-	right: 1em;
+	top: 1em;
+	right: 0;
 }
 
 .navbar a {
@@ -194,13 +193,10 @@ footer {
 }
 
 .photo-header .navbar a {
+	padding: 1em 0.5em 1em 0;
 	color: #af5f8f;
 	font-size: 1.2em;
 	line-height: 2;
-}
-
-.photo-header .navbar a:nth-child(2) {
-	padding-left: 0;
 }
 
 .photo-album {
@@ -349,9 +345,9 @@ footer {
 }
 
 @media (max-width: 800px) {
-	/*.container {
+	.container {
 		padding-top: 4em;
-	}*/
+	}
 
 	#index {
 		background-position: 30% 0%;
@@ -363,6 +359,10 @@ footer {
 
 	#index .navbar {
 		display: none;
+	}
+
+	.photo-header .navbar {
+		top: -3em;
 	}
 
 	.dropdown {
@@ -468,16 +468,33 @@ footer {
 		width: 45%;
 	}
 
-	.navbar {
-		bottom: 0.5em;
-	}
-
 	.photo-album {
 		width: 80%;
 	}
 }
 
 @media (max-width: 640px) {
+	.photo-header .navbar, .site-name {
+		width: 100%;
+		margin: 0 auto;
+		padding: 0 1em;
+		text-align: center;
+		left: 0;
+		box-sizing: border-box;
+	}
+
+	.photo-header .navbar a {
+		padding: 1em 0.5em;
+	}
+
+	.photo-header .site-name {
+		margin-top: 1.5em;
+	}
+
+	.site-name h2 {
+		padding: 0.5em 0 0 0;
+	}
+
 	#about {
 		padding: 1em 2em;
 	}
@@ -488,25 +505,16 @@ footer {
 }
 
 @media (max-width: 440px) {
-	.site-name, .navbar {
-		width: 100%;
-		margin: 0 auto;
-		text-align: center;
-		left: 0;
+	.photo-header .navbar {
+		top: -2.3em;
+	}
+
+	.photo-header .navbar a {
+		padding: 0.3em 0.1em;
 	}
 
 	.site-name h1 {
 		font-size: 2.5em;
-	}
-
-	.site-name h2 {
-		padding: 0.5em 0 0 0;
-	}
-
-	.navbar a {
-		padding: 0.1em 0.5em;
-		text-align: center;
-		display: block;
 	}
 
 	#contacts, .copyright {
@@ -518,5 +526,15 @@ footer {
 
 	.copyright {
 		padding: 0.7em 0;
+	}
+}
+
+@media (max-width: 340px) {
+	.photo-header .site-name {
+		margin-top: 2em;
+	}
+
+	.site-name h1 {
+		font-size: 2.2em;
 	}
 }
