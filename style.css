@@ -195,26 +195,38 @@ footer {
 	position: relative;
 }
 
-.contacts-icons {
-	height: 100%;
+.contacts-icons, .copyright {
 	margin: 0 1em;
+}
+
+.contacts-icons {
 	float: left;
 }
 
 .contacts-icons a {
-	width: 50px;
-	height: 50px;
-	margin: 0.1em -0.3em 0 -0.3em;
+	width: 40px;
+	height: 40px;
+	margin: 0.5em -0.4em 0 -0.4em;
 	vertical-align: middle;
 }
 
-.contacts-icons img {
+.contacts-icons img, .copyright img {
 	width: 100%;
 	margin: 0 auto;
 }
 
 .copyright {
-	margin: 1.3em 1em 1em 1em;
+	float: right;
+}
+
+.copyright a {
+	width: 27px;
+	height: 27px;
+	margin-top: 0.8em;
+}
+
+.copyright p {
+	margin: 1.3em 1em 1em 0.3em;
 	color: #fff;
 	font-size: 0.9em;
 	float: right;
@@ -596,14 +608,27 @@ footer {
 	}
 
 	.contacts-icons, .copyright {
-		width: 100%;
 		margin: 0 auto;
-		text-align: center;
 		float: none;
 	}
 
+	.contacts-icons {
+		width: 100%;
+		text-align: center;
+	}
+
 	.copyright {
+		width: 10em;
 		padding: 0.7em 0;
+	}
+
+	.copyright a {
+		margin: -0.35em 0 0 0;
+	}
+
+	.copyright p {
+		margin: 0;
+		padding: 0;
 	}
 }
 
