@@ -461,12 +461,16 @@ footer {
 		padding: 1em 3em;
 	}
 
-	.portfolio-icon {
+	.portfolio-icon, .photo-icon {
 		width: 45%;
 	}
 
 	.photo-album {
 		width: 80%;
+	}
+
+	.photo-icon {
+		margin: 0.5em;
 	}
 }
 
@@ -496,7 +500,7 @@ footer {
 		padding: 1em 2em;
 	}
 
-	.portfolio-icon {
+	.portfolio-icon, .photo-icon {
 		width: 90%;
 	}
 }
