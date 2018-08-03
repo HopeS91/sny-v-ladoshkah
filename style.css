@@ -139,7 +139,7 @@ main {
 
 #about p {
 	margin: 0;
-	line-height: 1.4;
+	font-size: 1.1em;
 }
 
 #about .first-letter {
@@ -230,6 +230,10 @@ footer {
 	color: #fff;
 	font-size: 0.9em;
 	float: right;
+}
+
+.photo-page {
+	padding-bottom: 1em;
 }
 
 .photo-header {
