@@ -275,11 +275,12 @@ footer {
 }
 
 #front {
-	width: 60%;
-	height: 33em;
-	margin: 5% auto 0 auto;
+	width: 70%;
+	height: 100%;
+	margin: 0 auto;
 	background-color: rgba(0, 0, 0, 0);
 	position: relative;
+	top: 0;
 	z-index: 20;
 }
 
@@ -302,12 +303,18 @@ footer {
 }
 
 .slide {
-	margin: 0 auto;
 	display: none;
+	margin: auto;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
 }
 
 .vertical {
-	height: 100%;
+	max-width: 100%;
+	max-height: 80%;
 }
 
 .horizontal {
@@ -338,7 +345,7 @@ footer {
 	margin: 0 auto;
 	text-align: center;
 	position: relative;
-	top: 1em;
+	bottom: 3em;
 	z-index: 20;
 }
 
@@ -553,6 +560,22 @@ footer {
 	.photo-icon {
 		margin: 0.5em;
 	}
+
+	.prev-slide, .next-slide {
+		padding: 1em;
+	}
+
+	.prev-slide {
+		left: 0;
+	}
+
+	.next-slide {
+		right: 0;
+	}
+
+	.dots {
+		bottom: 1.5em;
+	}
 }
 
 @media (max-width: 640px) {
@@ -591,6 +614,10 @@ footer {
 
 	.portfolio-icon, .photo-icon {
 		width: 90%;
+	}
+
+	.prev-slide, .next-slide {
+		padding: 1em 0.5em;
 	}
 }
 
