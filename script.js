@@ -93,18 +93,19 @@ function toggleBurger(event) {
 	burgerSpans[2].classList.toggle('span-three-active');
 	setTimeout(function() {
 		burgerSpans[1].classList.toggle('span-two-active');
-	}, 100);
+	}, 0);
 
-	if (event.target.closest('#burger')) toggleDropdown();
-	else closeDropdown();
+	if (event.target.closest('#burger')) showDropdown();
+	else hideDropdown();
 }
 
-// показать/спрятать dropdown-меню
-function toggleDropdown() {
+// показать dropdown-меню
+function showDropdown() {
 	dropdownMenu.style.display = 'none' ? 'block' : 'none';
 }
 
-function closeDropdown() {
+// спрятать dropdown-меню
+function hideDropdown() {
 	dropdownMenu.style.display = 'block' ? 'none' : 'block';
 }
 
