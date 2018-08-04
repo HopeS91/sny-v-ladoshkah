@@ -14,8 +14,8 @@ const closeIcon = document.getElementById('close');
 
 
 // автоматическая медленная прокрутка к якорю
-function scrollToAnchor(e) {
-	e.preventDefault();
+function scrollToAnchor(event) {
+	event.preventDefault();
 
 	let speed = 1;
 	let y = window.pageYOffset;
@@ -67,13 +67,11 @@ function showSlides(index) {
 	if (index > slides.length) mainSlide = 1;
 	if (index < 1) mainSlide = slides.length;
 	
-	// ИСПРАВИТЬ НА: начать просмотр с той, по которой был клик
 	for (let i = 0; i < slides.length; i++) {
 		slides[i].style.display = 'none';
 		slides[mainSlide - 1].style.display = 'block';
 	}
 
-	// ИСПРАВИТЬ НА: окрасить ту, по которой был клик
 	for (let i = 0; i < dots.length; i++) {
 		dots[i].style.backgroundColor = '#ccc';
 		dots[mainSlide - 1].style.backgroundColor = '#c471a3';
