@@ -312,13 +312,9 @@ footer {
 	left: 0;
 }
 
-.vertical {
+.vertical, .horizontal {
 	max-width: 100%;
 	max-height: 80%;
-}
-
-.horizontal {
-	width: 100%;
 }
 
 .prev-slide, .next-slide {
@@ -345,7 +341,7 @@ footer {
 	margin: 0 auto;
 	text-align: center;
 	position: relative;
-	bottom: 3em;
+	bottom: 2.5em;
 	z-index: 20;
 }
 
