@@ -550,6 +550,10 @@ footer {
 		width: 75%;
 	}
 
+	.contacts-icons a {
+		margin: 0.5em -0.3em 0 -0.3em;
+	}
+
 	.photo-album {
 		width: 80%;
 	}
@@ -613,6 +617,10 @@ footer {
 		width: 90%;
 	}
 
+	.contacts-icons a {
+		margin: 0.5em -0.1em 0 -0.1em;
+	}
+
 	.prev-slide, .next-slide {
 		padding: 1em 0.5em;
 	}
@@ -643,6 +651,10 @@ footer {
 	.contacts-icons {
 		width: 100%;
 		text-align: center;
+	}
+
+	.contacts-icons a {
+		margin: 0.5em 0 0 0;
 	}
 
 	.copyright {
