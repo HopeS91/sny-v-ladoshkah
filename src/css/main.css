@@ -1,0 +1,357 @@
+html, body, .container, #index {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	text-decoration: none;
+	color: #000;
+	border: none;
+	display: inline-block;
+	outline: none;
+}
+
+.container {
+	min-height: 100%;
+	position: relative;
+	font-family: 'Alegreya Sans', sans-serif;
+	font-weight: 100;
+	letter-spacing: 0.03em;
+}
+
+header {
+	min-height: 10em;
+}
+
+#index {
+	background: url(images/DSC_6346--2.jpg) 50% 0%/cover no-repeat;
+	overflow: hidden;
+}
+
+.site-name {
+	margin: 0 1em;
+	text-align: left;
+	position: absolute;
+	top: 1.2em;
+	left: 0;
+}
+
+#index .site-name {
+	color: #f9f9f9;
+}
+
+.site-name h1, h2 {
+	margin: 0;
+}
+
+.site-name h1 {
+	font-family: 'Marck Script', cursive;
+	font-size: 4em;
+	font-weight: 400;
+	line-height: 1;
+}
+
+.site-name h2 {
+	font-size: 1.2em;
+	font-weight: 100;
+}
+
+.navbar {
+	margin: 0 1em;
+	position: absolute;
+	top: 1em;
+	right: 0;
+}
+
+.navbar a {
+	padding: 1em 0.5em;
+	font-size: 1.5em;
+}
+
+#index .navbar a {
+	color: #f9f9f9;
+	font-family: 'Marck Script', cursive;
+}
+
+.dropdown {
+	display: none;
+}
+
+#arrow-down, #arrow-up {
+	width: 50px;
+	right: 1em;
+	cursor: pointer;
+	transition: all 0.8s;
+}
+
+#arrow-down {
+	position: absolute;
+	bottom: 0.2em;
+}
+
+#arrow-down:hover {
+	bottom: 0.1em;
+}
+
+#arrow-down img, #arrow-up img {
+	width: 100%;
+}
+
+#arrow-up {
+	position: fixed;
+	bottom: 0.8em;
+	z-index: 1;
+	display: none;
+}
+
+#arrow-up:hover {
+	bottom: 1em;
+}
+
+main {
+	min-height: 100%;
+	padding: 0 1em;
+	position: relative;
+}
+
+.ornament {
+	width: 90%;
+	margin: 0 auto;
+	padding: 1em 0;
+	text-align: center;
+}
+
+.ornament img {
+	width: 100%;
+	max-width: 1700px;
+}
+
+#about, #portfolio {
+	margin: 0 auto;
+	padding: 1em 0;
+	text-align: center;
+}
+
+#about {
+	width: 70%;
+}
+
+#about p {
+	margin: 0;
+	font-size: 1.1em;
+}
+
+#about .first-letter {
+	color: #af5f8f;
+	font-family: 'Marck Script', cursive;
+	font-size: 3em;
+}
+
+.portfolio-icon {
+	width: 30%;
+	display: inline-block;
+}
+
+.portfolio-icon img {
+	width: 100%;
+}
+
+.portfolio-icon h6 {
+	margin: 0 0 1em 0;
+	color: #af5f8f;
+	font-family: 'Marck Script', cursive;
+	font-size: 1.5em;
+}
+
+#contacts {
+	width: 50%;
+	min-height: 7em;
+	margin: 0 auto;
+	padding: 1em 0;
+	position: relative;
+}
+
+#contacts p {
+	margin: 0;
+	padding: 1em;
+	font-size: 1.2em;
+	position: absolute;
+}
+
+#contacts span {
+	font-weight: bold;
+}
+
+#contacts a {
+	color: #af5f8f;
+}
+
+footer {
+	width: 100%;
+	min-height: 3.5em;
+	background-color: #c471a3;
+	border-top: 2px solid #af5f8f;
+	position: relative;
+}
+
+.contacts-icons, .copyright {
+	margin: 0 1em;
+}
+
+.contacts-icons {
+	float: left;
+}
+
+.contacts-icons a {
+	width: 40px;
+	height: 40px;
+	margin: 0.5em -0.4em 0 -0.4em;
+	vertical-align: middle;
+}
+
+.contacts-icons img, .copyright img {
+	width: 100%;
+	margin: 0 auto;
+}
+
+.copyright {
+	float: right;
+}
+
+.copyright a {
+	width: 27px;
+	height: 27px;
+	margin-top: 0.8em;
+}
+
+.copyright p {
+	margin: 1.3em 1em 1em 0.3em;
+	color: #fff;
+	font-size: 0.9em;
+	float: right;
+}
+
+.photo-page {
+	padding-bottom: 1em;
+}
+
+.photo-header {
+	position: relative;
+}
+
+.photo-header .site-name {
+	color: #af5f8f;
+}
+
+.photo-header .navbar a {
+	padding: 1em 0.5em 1em 0;
+	color: #af5f8f;
+	font-size: 1.2em;
+	line-height: 2;
+}
+
+.photo-album {
+	width: 50em;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.photo-icon {
+	width: 12em;
+	margin: 0.5em 1em;
+	cursor: pointer;
+}
+
+#back {
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.8);
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 10;
+	display: none;
+}
+
+#front {
+	width: 70%;
+	height: 100%;
+	margin: 0 auto;
+	background-color: rgba(0, 0, 0, 0);
+	position: relative;
+	top: 0;
+	z-index: 20;
+}
+
+#close {
+	width: 1em;
+	height: 1em;
+	color: #ccc;
+	font-size: 2em;
+	background-color: rgba(0, 0, 0, 0);
+	border: 0;
+	position: absolute;
+	top: 5px;
+	right: 10px;
+	outline: none;
+	z-index: 20;
+}
+
+#close:hover {
+	font-size: 2.05em;
+}
+
+.slide {
+	display: none;
+	margin: auto;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+
+.vertical, .horizontal {
+	max-width: 100%;
+	max-height: 80%;
+}
+
+.prev-slide, .next-slide {
+	padding: 1em 1.2em;
+	color: #ccc;
+  font-size: 1.5em;
+	border-radius: 0.3em;
+	cursor: pointer;
+	position: absolute;
+	top: 45%;
+}
+
+.prev-slide {
+	left: 1em;
+}
+
+.next-slide {
+	right: 1em;
+}
+
+.dots {
+	width: 50%;
+	height: 1em;
+	margin: 0 auto;
+	text-align: center;
+	position: relative;
+	bottom: 2.5em;
+	z-index: 20;
+}
+
+.dot {
+	width: 0.5em;
+	height: 0.5em;
+	margin: 0 0.1em;
+	background-color: #ccc;
+	border-radius: 50%;
+	display: inline-block;
+	vertical-align: middle;
+}
