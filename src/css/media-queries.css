@@ -150,8 +150,10 @@
 	}
 
 	.span-one-active {
-		transform: rotate(40deg);
-		transform-origin: 8% 50%;
+		-webkit-transform: rotate(40deg);
+		        transform: rotate(40deg);
+		-webkit-transform-origin: 8% 50%;
+		        transform-origin: 8% 50%;
 	}
 
 	.span-two-active {
@@ -159,8 +161,10 @@
 	}
 
 	.span-three-active {
-		transform: rotate(-40deg);
-		transform-origin: 8% 50%;
+		-webkit-transform: rotate(-40deg);
+		        transform: rotate(-40deg);
+		-webkit-transform-origin: 8% 50%;
+		        transform-origin: 8% 50%;
 	}
 
 	.portfolio-icon, .photo-icon {
