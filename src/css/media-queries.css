@@ -114,10 +114,6 @@
 		height: 3px;
 		background-color: #f9f9f9;
 		position: absolute;
-		-webkit-transition: 0.5s;
-		-moz-transition: 0.5s;
-		-ms-transition: 0.5s;
-		-o-transition: 0.5s;
 		transition: 0.5s;
 	}
 
@@ -154,15 +150,7 @@
 	}
 
 	.span-one-active {
-		-webkit-transform: rotate(40deg);
-		-moz-transform: rotate(40deg);
-		-ms-transform: rotate(40deg);
-		-o-transform: rotate(40deg);
 		transform: rotate(40deg);
-		-webkit-transform-origin: 8% 50%;
-		-moz-transform-origin: 8% 50%;
-		-ms-transform-origin: 8% 50%;
-		-o-transform-origin: 8% 50%;
 		transform-origin: 8% 50%;
 	}
 
@@ -171,15 +159,7 @@
 	}
 
 	.span-three-active {
-		-webkit-transform: rotate(-40deg);
-		-moz-transform: rotate(-40deg);
-		-ms-transform: rotate(-40deg);
-		-o-transform: rotate(-40deg);
 		transform: rotate(-40deg);
-		-webkit-transform-origin: 8% 50%;
-		-moz-transform-origin: 8% 50%;
-		-ms-transform-origin: 8% 50%;
-		-o-transform-origin: 8% 50%;
 		transform-origin: 8% 50%;
 	}
 
