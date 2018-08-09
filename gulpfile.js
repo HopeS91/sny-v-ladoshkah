@@ -45,3 +45,10 @@ gulp.task('build', gulp.series(
 	'clean', 
 	gulp.parallel('css', 'js'))
 );
+
+gulp.task('watch', function() {
+	gulp.watch('src/css/*.css', gulp.series('css'));
+	gulp.watch('src/js/*.js', gulp.series('js'));
+});
+
+gulp.task('default', gulp.series('build', 'watch'));
