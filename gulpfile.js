@@ -41,4 +41,7 @@ gulp.task('clean', function() {
 	return del('src/src');
 });
 
-gulp.task('build', gulp.series('clean', 'css', 'js'));
+gulp.task('build', gulp.series(
+	'clean', 
+	gulp.parallel('css', 'js'))
+);
