@@ -7,6 +7,7 @@ const uglifycss = require('gulp-uglifycss');
 const concat = require('gulp-concat');
 const babel = require('gulp-babel');
 const uglify = require('gulp-uglify');
+const del = require('del');
 
 gulp.task('css', function() {
 	const plugins = [
@@ -21,7 +22,7 @@ gulp.task('css', function() {
 		.pipe(debug({title: 'autoprefixer:'}))
 		.pipe(uglifycss({"uglyComments": true}))
 		.pipe(debug({title: 'uglifycss:'}))
-		.pipe(gulp.dest('src'));
+		.pipe(gulp.dest('src/src'));
 });
 
 gulp.task('js', function() {
@@ -33,5 +34,11 @@ gulp.task('js', function() {
 		.pipe(debug({title: 'babel:'}))
 		.pipe(uglify())
 		.pipe(debug({title: 'uglifyjs:'}))
-		.pipe(gulp.dest('src'));
+		.pipe(gulp.dest('src/src'));
 });
+
+gulp.task('clean', function() {
+	return del('src/src');
+});
+
+gulp.task('build', gulp.series('clean', 'css', 'js'));
