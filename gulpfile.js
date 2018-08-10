@@ -11,13 +11,14 @@ const del = require('del');
 const remember = require('gulp-remember');
 const path = require('path');
 const cached = require('gulp-cached');
+const browserSync = require('browser-sync').create();
 
 gulp.task('css', function() {
 	const plugins = [
 		autoprefixer({browsers: ['last 3 version']})
 	];
 
-	return gulp.src('src/css/*.css')
+	return gulp.src('./dev/css/*.css')
 		.pipe(debug({title: 'src:'}))
 		.pipe(cached('css'))
 		.pipe(debug({title: 'cached:'}))
@@ -29,11 +30,11 @@ gulp.task('css', function() {
 		.pipe(debug({title: 'concatCss:'}))
 		.pipe(uglifycss({"uglyComments": true}))
 		.pipe(debug({title: 'uglifycss:'}))
-		.pipe(gulp.dest('src/src'));
+		.pipe(gulp.dest('./public'));
 });
 
 gulp.task('js', function() {
-	return gulp.src('src/js/*.js')
+	return gulp.src('./dev/js/*.js')
 		.pipe(debug({title: 'src:'}))
 		.pipe(cached('js'))
 		.pipe(debug({title: 'cached:'}))
@@ -45,27 +46,47 @@ gulp.task('js', function() {
 		.pipe(debug({title: 'concatjs:'}))
 		.pipe(uglify())
 		.pipe(debug({title: 'uglifyjs:'}))
-		.pipe(gulp.dest('src/src'));
+		.pipe(gulp.dest('./public'));
+});
+
+gulp.task('assets', function() {
+	return gulp.src('./dev/assets/**/*.*', {since: gulp.lastRun('assets')})
+		.pipe(debug({title: 'assets:'}))
+		.pipe(gulp.dest('./public'));
 });
 
 gulp.task('clean', function() {
-	return del('src/src');
+	return del('./public');
 });
 
 gulp.task('build', gulp.series(
 	'clean', 
-	gulp.parallel('css', 'js'))
+	gulp.parallel('css', 'js', 'assets'))
 );
 
 gulp.task('watch', function() {
-	gulp.watch('src/css/*.css', gulp.series('css')).on('unlink', function(filepath) {
+	gulp.watch('./dev/css/*.css', gulp.series('css')).on('unlink', function(filepath) {
 		remember.forget('css', path.resolve(filepath));
 		delete cached.caches.css[path.resolve(filepath)];
 	});
-	gulp.watch('src/js/*.js', gulp.series('js')).on('unlink', function(filepath) {
+
+	gulp.watch('./dev/js/*.js', gulp.series('js')).on('unlink', function(filepath) {
 		remember.forget('js', path.resolve(filepath));
 		delete cached.caches.js[path.resolve(filepath)];
 	});
+	
+	gulp.watch('./dev/assets/**/*.*', gulp.series('assets'));
 });
 
-gulp.task('default', gulp.series('build', 'watch'));
+gulp.task('server', function() {
+	browserSync.init({
+		server: './public'
+	});
+
+	browserSync.watch('./public/**/*.*').on('change', browserSync.reload);
+});
+
+gulp.task('default', gulp.series(
+	'build', 
+	gulp.parallel('watch', 'server'))
+);
