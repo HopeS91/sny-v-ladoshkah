@@ -19,39 +19,26 @@ gulp.task('css', function() {
 	];
 
 	return gulp.src('./dev/css/*.css')
-		.pipe(debug({title: 'src:'}))
 		.pipe(cached('css'))
-		.pipe(debug({title: 'cached:'}))
 		.pipe(postcss(plugins))
-		.pipe(debug({title: 'autoprefixer:'}))
 		.pipe(remember('css'))
-		.pipe(debug({title: 'remember:'}))
 		.pipe(concatCss('style.css'))
-		.pipe(debug({title: 'concatCss:'}))
 		.pipe(uglifycss({"uglyComments": true}))
-		.pipe(debug({title: 'uglifycss:'}))
 		.pipe(gulp.dest('./public'));
 });
 
 gulp.task('js', function() {
 	return gulp.src('./dev/js/*.js')
-		.pipe(debug({title: 'src:'}))
 		.pipe(cached('js'))
-		.pipe(debug({title: 'cached:'}))
 		.pipe(babel({presets: ['env']}))
-		.pipe(debug({title: 'babel:'}))
 		.pipe(remember('js'))
-		.pipe(debug({title: 'remember:'}))
 		.pipe(concat('script.js'))
-		.pipe(debug({title: 'concatjs:'}))
 		.pipe(uglify())
-		.pipe(debug({title: 'uglifyjs:'}))
 		.pipe(gulp.dest('./public'));
 });
 
 gulp.task('assets', function() {
 	return gulp.src('./dev/assets/**/*.*', {since: gulp.lastRun('assets')})
-		.pipe(debug({title: 'assets:'}))
 		.pipe(gulp.dest('./public'));
 });
 
@@ -74,7 +61,7 @@ gulp.task('watch', function() {
 		remember.forget('js', path.resolve(filepath));
 		delete cached.caches.js[path.resolve(filepath)];
 	});
-	
+
 	gulp.watch('./dev/assets/**/*.*', gulp.series('assets'));
 });
 
