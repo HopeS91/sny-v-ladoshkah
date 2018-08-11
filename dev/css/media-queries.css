@@ -201,6 +201,34 @@
 }
 
 @media (max-width: 640px) {
+	.container {
+		padding-top: 3.5em;
+	}
+
+	.dropdown {
+		height: 3.5em;
+	}
+
+	#burger {
+		top: 0.75em;
+	}
+
+	#drop-menu {
+		padding-top: 3.5em;
+	}
+
+	#drop-menu a {
+		padding: 0.8em 1em;
+	}
+
+	.site-name h2 {
+		padding: 0.5em 0 0 0;
+	}
+
+	#index .site-name {
+		top: 4.5em;
+	}
+
 	.photo-header .navbar, .site-name {
 		width: 100%;
 		margin: 0 auto;
@@ -210,16 +238,16 @@
 		box-sizing: border-box;
 	}
 
+	.photo-header .navbar {
+		top: -2.5em;
+	}
+
 	.photo-header .navbar a {
 		padding: 1em 0.5em;
 	}
 
 	.photo-header .site-name {
 		margin-top: 1.5em;
-	}
-
-	.site-name h2 {
-		padding: 0.5em 0 0 0;
 	}
 
 	#about, #contacts {
@@ -248,14 +276,6 @@
 }
 
 @media (max-width: 440px) {
-	.photo-header .navbar {
-		top: -2.3em;
-	}
-
-	.photo-header .navbar a {
-		padding: 0.3em 0.1em;
-	}
-
 	.site-name h1 {
 		font-size: 2.5em;
 	}
@@ -291,14 +311,43 @@
 		margin: 0;
 		padding: 0;
 	}
+
+	.photo-header .navbar {
+		top: -2.3em;
+	}
+
+	.photo-header .navbar a {
+		padding: 0.3em 0.1em;
+	}
 }
 
 @media (max-width: 340px) {
+	.site-name h1 {
+		font-size: 2.2em;
+	}
+
 	.photo-header .site-name {
 		margin-top: 2em;
 	}
+}
 
-	.site-name h1 {
+@media (max-width: 800px) and (orientation: landscape) {
+	#index .site-name {
+		text-align: right;
+		right: 0;
+	}
+
+	#index .site-name h2 {
+		padding: 0.5em 0 0 0;
+	}
+}
+
+@media (max-width: 640px) and (orientation: landscape) {
+	#index .site-name {
+		top: 4.3em;
+	}
+
+	#index .site-name h1 {
 		font-size: 2.2em;
 	}
 }
