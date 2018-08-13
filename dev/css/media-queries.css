@@ -101,9 +101,9 @@
 
 	#burger {
 		width: 2.5em;
-		height: 2em;
+		height: 1.5em;
 		position: absolute;
-		top: 1em;
+		top: 1.3em;
 		right: 1em;
 		cursor: pointer;
 	}
@@ -118,15 +118,15 @@
 	}
 
 	#burger span:first-child {
-		top: 5px;
+		top: 0em;
 	}
 
 	#burger span:nth-child(2) {
-		top: 15px;
+		top: 0.7em;
 	}
 
 	#burger span:last-child {
-		bottom: 3px;
+		bottom: 0em;
 	}
 
 	#drop-menu {
@@ -151,7 +151,7 @@
 
 	.span-one-active {
 		transform: rotate(40deg);
-		transform-origin: 8% 50%;
+		transform-origin: 9% 50%;
 	}
 
 	.span-two-active {
@@ -160,7 +160,7 @@
 
 	.span-three-active {
 		transform: rotate(-40deg);
-		transform-origin: 8% 50%;
+		transform-origin: 9% 50%;
 	}
 
 	.portfolio-icon, .photo-icon {
@@ -210,7 +210,7 @@
 	}
 
 	#burger {
-		top: 0.75em;
+		top: 1em;
 	}
 
 	#drop-menu {
@@ -299,15 +299,16 @@
 	}
 
 	.copyright {
-		width: 10em;
+		width: 11em;
 		padding: 0.7em 0;
 	}
 
 	.copyright a {
-		margin: -0.35em 0 0 0;
+		margin: -0.4em 0 0 0;
 	}
 
 	.copyright p {
+		height: 100%;
 		margin: 0;
 		padding: 0;
 	}
