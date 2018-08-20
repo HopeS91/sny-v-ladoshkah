@@ -340,7 +340,7 @@ footer {
 }
 
 .dots {
-	width: 50%;
+	width: 100%;
 	height: 1em;
 	margin: 0 auto;
 	text-align: center;
@@ -358,3 +358,4 @@ footer {
 	display: inline-block;
 	vertical-align: middle;
 }
+

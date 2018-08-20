@@ -194,11 +194,9 @@
 	.next-slide {
 		right: 0;
 	}
-
-	.dots {
-		bottom: 1.5em;
-	}
 }
+
+
 
 @media (max-width: 640px) {
 	.container {
@@ -332,6 +330,12 @@
 	}
 }
 
+@media (max-width: 900px) and (orientation: landscape) {
+	.dots {
+		bottom: 1.5em;
+	}
+}
+
 @media (max-width: 800px) and (orientation: landscape) {
 	#index .site-name {
 		text-align: right;
@@ -352,3 +356,4 @@
 		font-size: 2.2em;
 	}
 }
+
