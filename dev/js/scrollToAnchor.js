@@ -27,3 +27,4 @@ function scrollToAnchor(event) {
 }
 
 anchorElements.forEach(anchorElement => anchorElement.addEventListener('click', scrollToAnchor));
+

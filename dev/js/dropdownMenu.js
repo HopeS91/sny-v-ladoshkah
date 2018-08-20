@@ -25,3 +25,4 @@ function hideDropdown() {
 }
 
 dropdown.forEach(element => element.addEventListener('click', toggleBurger));
+

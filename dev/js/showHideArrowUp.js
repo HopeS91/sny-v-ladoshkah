@@ -7,3 +7,4 @@ function showHideArrowUp() {
 }
 
 window.addEventListener('scroll', showHideArrowUp);
+
