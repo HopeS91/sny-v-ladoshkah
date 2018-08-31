@@ -7,7 +7,7 @@ const nextSlide = document.querySelector('.next-slide');
 const closeIcon = document.getElementById('close');
 
 let mainSlide = null; // индекс активной картинки
-let start = null;
+let start = null; // с какой фотографии начать листать
 
 // по клику на мини-фото показывать слайдер
 function showFirstSlide() {
@@ -42,11 +42,17 @@ function showFirstSlide() {
 function moveSlides(index) {
 	mainSlide += index;
 
-	if (mainSlide < 1) prevSlide.style.display = 'none';
-	else prevSlide.style.display = 'block';
+	if (mainSlide < 1) {
+		prevSlide.style.display = 'none';
+	} else {
+		prevSlide.style.display = 'block';
+	}
 
-	if (mainSlide > slides.length - 2) nextSlide.style.display = 'none';
-	else nextSlide.style.display = 'block';
+	if (mainSlide > slides.length - 2) {
+		nextSlide.style.display = 'none';
+	} else {
+		nextSlide.style.display = 'block';
+	}
 
 	slides.forEach(slide => slide.style.display = 'none');
 

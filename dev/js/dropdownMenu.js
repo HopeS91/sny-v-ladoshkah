@@ -10,8 +10,11 @@ function toggleBurger(event) {
 		burgerSpans[1].classList.toggle('span-two-active');
 	}, 200);
 
-	if (event.target.closest('#burger')) showDropdown();
-	else hideDropdown();
+	if (event.target.closest('#burger')) {
+		showDropdown();
+	} else {
+		hideDropdown();
+	}
 }
 
 // показать dropdown-меню

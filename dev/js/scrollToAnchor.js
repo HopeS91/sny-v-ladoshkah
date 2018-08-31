@@ -13,16 +13,26 @@ function scrollToAnchor(event) {
 	requestAnimationFrame(step);
 
 	function step(time) {
-		
-		if (start === null) start = time;
+		if (start === null) {
+			start = time;
+		}
 
 		let progress = time - start;
-		let scroll = (indent < 0 ? Math.max(y - progress/speed, y + indent) : Math.min(y + progress/speed, y + indent));
+		let scroll = null;
+		
+		if (indent < 0) {
+			scroll = Math.max(y - progress/speed, y + indent);
+		} else {
+			scroll = Math.min(y + progress/speed, y + indent);
+		}
 
 		window.scrollTo(0, scroll);
 
-		if (scroll !== y + indent) requestAnimationFrame(step);
-		else location.hash = hash;
+		if (scroll !== y + indent) {
+			requestAnimationFrame(step);
+		} else {
+			location.hash = hash;
+		}
 	}
 }
 
