@@ -19,7 +19,7 @@ gulp.task('css', function() {
     .pipe(cached('css'))
     .pipe(postcss([autoprefixer()]))
     .pipe(remember('css'))
-		.pipe(concatCss('style.css'))
+    .pipe(concatCss('style.css'))
     .pipe(uglifycss({"uglyComments": true}))
     .pipe(gulp.dest('./public'));
 });
