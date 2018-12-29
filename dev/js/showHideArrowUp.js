@@ -1,6 +1,5 @@
 const arrowUp = document.getElementById('arrow-up');
 
-// показывать/прятать стрелку, которая автоматически прокручивает страницу на самый верх
 function showHideArrowUp() {
 	if (window.pageYOffset > window.innerHeight / 3) {
 		arrowUp.style.display = 'inline-block';
@@ -10,4 +9,3 @@ function showHideArrowUp() {
 }
 
 window.addEventListener('scroll', showHideArrowUp);
-

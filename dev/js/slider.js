@@ -80,4 +80,3 @@ function hideSlides() {
 
 photoIcons.forEach(photoIcon => photoIcon.addEventListener('click', showFirstSlide));
 closeIcon.addEventListener('click', hideSlides);
-

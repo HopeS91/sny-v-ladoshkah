@@ -1,6 +1,5 @@
 const anchorElements = document.querySelectorAll('[href^="#"]');
 
-// автоматическая медленная прокрутка к якорю
 function scrollToAnchor(event) {
 	event.preventDefault();
 
@@ -19,7 +18,7 @@ function scrollToAnchor(event) {
 
 		let progress = time - start;
 		let scroll = null;
-		
+
 		if (indent < 0) {
 			scroll = Math.max(y - progress/speed, y + indent);
 		} else {
@@ -37,4 +36,3 @@ function scrollToAnchor(event) {
 }
 
 anchorElements.forEach(anchorElement => anchorElement.addEventListener('click', scrollToAnchor));
-
