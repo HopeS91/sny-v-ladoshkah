@@ -4,7 +4,6 @@ const slides = document.querySelectorAll('.slide');
 const dots = document.querySelectorAll('.dot');
 const prevSlide = document.querySelector('.prev-slide');
 const nextSlide = document.querySelector('.next-slide');
-const closeIcon = document.getElementById('close');
 
 let mainSlide = null; // индекс активной картинки
 let start = null; // с какой фотографии начать листать
@@ -79,4 +78,3 @@ function hideSlides() {
 }
 
 photoIcons.forEach(photoIcon => photoIcon.addEventListener('click', showFirstSlide));
-closeIcon.addEventListener('click', hideSlides);
