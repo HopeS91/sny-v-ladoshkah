@@ -8,7 +8,6 @@ const nextSlide = document.querySelector('.next-slide');
 let mainSlide = null; // индекс активной картинки
 let start = null; // с какой фотографии начать листать
 
-// по клику на мини-фото показывать слайдер
 function showFirstSlide() {
 	back.style.display = 'block';
 
@@ -37,7 +36,6 @@ function showFirstSlide() {
 	});
 }
 
-// листать на кнопки "назад"/"вперёд"
 function moveSlides(index) {
 	mainSlide += index;
 
@@ -61,7 +59,6 @@ function moveSlides(index) {
 	}
 }
 
-// подсвечивать соответствующую активной фотографии точку
 function currentSlide() {
 	dots.forEach(dot => dot.style.backgroundColor = '#ccc');
 
@@ -70,7 +67,6 @@ function currentSlide() {
 	}
 }
 
-// прятать слайдер
 function hideSlides() {
 	mainSlide = null;
 	start = null;
