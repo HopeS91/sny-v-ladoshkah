@@ -1,35 +1,24 @@
 {
   "name": "sny-v-ladoshkah",
   "version": "1.0.0",
-  "description": "",
+  "description": "Portfolio website for a photographer from Irkutsk (Russia).",
   "main": "script.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/hopes91/sny-v-ladoshkah.git"
-  },
-  "author": "Nadya F-a",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/hopes91/sny-v-ladoshkah/issues"
-  },
-  "homepage": "https://github.com/hopes91/sny-v-ladoshkah#readme",
+  "repository": "git@github.com:hopes91/sny-v-ladoshkah.git",
+  "author": "Nadya F-a <iam@nadyafa.com>",
+  "license": "MIT",
   "devDependencies": {
-    "autoprefixer": "^9.1.0",
-    "babel-core": "^6.26.3",
-    "babel-preset-env": "^1.7.0",
-    "browser-sync": "^2.24.6",
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.2.3",
+    "autoprefixer": "^9.4.3",
+    "browser-sync": "^2.26.3",
     "del": "^3.0.0",
     "gulp": "^4.0.0",
-    "gulp-babel": "^7.0.1",
+    "gulp-babel": "^8.0.0",
     "gulp-cached": "^1.1.1",
     "gulp-concat": "^2.6.1",
-    "gulp-concat-css": "^3.1.0",
-    "gulp-debug": "^4.0.0",
     "gulp-postcss": "^8.0.0",
     "gulp-remember": "^1.0.1",
+    "gulp-sass": "^4.0.2",
     "gulp-uglify": "^3.0.1",
     "gulp-uglifycss": "^1.1.0",
     "path": "^0.12.7"

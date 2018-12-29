@@ -47,7 +47,7 @@ gulp.task('clean', function() {
 });
 
 gulp.task('build', gulp.series(
-	'clean', 
+	'clean',
 	gulp.parallel('css', 'js', 'assets'))
 );
 
@@ -74,6 +74,6 @@ gulp.task('server', function() {
 });
 
 gulp.task('default', gulp.series(
-	'build', 
+	'build',
 	gulp.parallel('watch', 'server'))
 );
