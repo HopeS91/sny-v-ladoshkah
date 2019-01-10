@@ -1,4 +1,4 @@
-const anchorElements = document.querySelectorAll('[href^="#"]');
+let anchorElements = document.querySelectorAll('[href^="#"]');
 
 function scrollToAnchor(event) {
 	event.preventDefault();

@@ -1,27 +1,34 @@
-const dropdown = document.querySelectorAll('.dropdown');
-const burgerSpans = document.querySelectorAll('#burger span');
-const dropdownMenu = document.getElementById('drop-menu');
+// для IE
+if (window.NodeList && !NodeList.prototype.forEach) {
+  NodeList.prototype.forEach = Array.prototype.forEach;
+}
 
-function toggleBurger(event) {
+let dropdown = document.querySelectorAll('.dropdown');
+let burgerSpans = document.querySelectorAll('#burger span');
+let dropdownMenu = document.getElementById('drop-menu');
+
+const toggleBurger = event => {
 	burgerSpans[0].classList.toggle('span-one-active');
 	burgerSpans[2].classList.toggle('span-three-active');
-	setTimeout(function() {
+	setTimeout(() => {
 		burgerSpans[1].classList.toggle('span-two-active');
 	}, 200);
 
-	if (event.target.closest('#burger')) {
+	let parentId = event.target.parentNode.id;
+
+	if (event.target === burger || parentId === 'burger') {
 		showDropdown();
-	} else {
+	} else if (event.target === dropdownMenu) {
 		hideDropdown();
 	}
 }
 
-function showDropdown() {
-	dropdownMenu.style.display = 'none' ? 'block' : 'none';
+const showDropdown = () => {
+	dropdownMenu.style.display = 'block';
 }
 
-function hideDropdown() {
-	dropdownMenu.style.display = 'block' ? 'none' : 'block';
+const hideDropdown = () => {
+	dropdownMenu.style.display = 'none';
 }
 
 dropdown.forEach(element => element.addEventListener('click', toggleBurger));

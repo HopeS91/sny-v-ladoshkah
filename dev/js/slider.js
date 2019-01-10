@@ -1,9 +1,9 @@
-const photoIcons = document.querySelectorAll('.photo-icon');
-const back = document.getElementById('back');
-const slides = document.querySelectorAll('.slide');
-const dots = document.querySelectorAll('.dot');
-const prevSlide = document.querySelector('.prev-slide');
-const nextSlide = document.querySelector('.next-slide');
+let photoIcons = document.querySelectorAll('.photo-icon');
+let back = document.getElementById('back');
+let slides = document.querySelectorAll('.slide');
+let dots = document.querySelectorAll('.dot');
+let prevSlide = document.querySelector('.prev-slide');
+let nextSlide = document.querySelector('.next-slide');
 
 let mainSlide = null; // индекс активной картинки
 let start = null; // с какой фотографии начать листать
@@ -36,7 +36,7 @@ function showFirstSlide() {
 	});
 }
 
-function moveSlides(index) {
+const moveSlides = index => {
 	mainSlide += index;
 
 	if (mainSlide < 1) {
@@ -59,7 +59,7 @@ function moveSlides(index) {
 	}
 }
 
-function currentSlide() {
+const currentSlide = () => {
 	dots.forEach(dot => dot.style.backgroundColor = '#ccc');
 
 	for (let i = start; i < dots.length; i++) {
@@ -67,7 +67,7 @@ function currentSlide() {
 	}
 }
 
-function hideSlides() {
+const hideSlides = () => {
 	mainSlide = null;
 	start = null;
 	back.style.display = 'none';

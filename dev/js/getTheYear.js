@@ -1,4 +1,4 @@
-const spanYear = document.getElementById('year');
+let spanYear = document.getElementById('year');
 
 const getTheYear = () => {
   let today = new Date();
