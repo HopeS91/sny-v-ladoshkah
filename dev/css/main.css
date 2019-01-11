@@ -51,14 +51,14 @@ header {
 }
 
 .site-name h1 {
-	font-family: 'Marck Script', cursive;
-	font-size: 4em;
+	font-family: 'Marck Script', sans-serif;
+	font-size: 3em;
 	font-weight: 400;
 	line-height: 1;
 }
 
 .site-name h2 {
-	font-size: 1.2em;
+	font-size: 1.1em;
 	font-weight: 100;
 }
 
@@ -71,12 +71,12 @@ header {
 
 .navbar a {
 	padding: 1em 0.5em;
-	font-size: 1.5em;
+	font-size: 1.2em;
 }
 
 #index .navbar a {
 	color: #f9f9f9;
-	font-family: 'Marck Script', cursive;
+	font-family: 'Marck Script', sans-serif;
 }
 
 .dropdown {
@@ -140,6 +140,7 @@ main {
 
 #about {
 	width: 70%;
+	max-width: 60em;
 }
 
 #about p {
@@ -149,7 +150,7 @@ main {
 
 #about .first-letter {
 	color: #af5f8f;
-	font-family: 'Marck Script', cursive;
+	font-family: 'Marck Script', sans-serif;
 	font-size: 3em;
 }
 
@@ -165,13 +166,13 @@ main {
 .portfolio-icon h6 {
 	margin: 0 0 1em 0;
 	color: #af5f8f;
-	font-family: 'Marck Script', cursive;
+	font-family: 'Marck Script', sans-serif;
 	font-size: 1.5em;
 }
 
 #contacts {
-	width: 50%;
-	min-height: 7em;
+	width: 40em;
+	min-height: 5em;
 	margin: 0 auto;
 	padding: 1em 0;
 	position: relative;
@@ -179,8 +180,8 @@ main {
 
 #contacts p {
 	margin: 0;
-	padding: 1em;
-	font-size: 1.2em;
+	padding: 0.5em;
+	font-size: 1.1em;
 	position: absolute;
 }
 
@@ -253,10 +254,9 @@ footer {
 }
 
 .photo-header .navbar a {
-	padding: 1em 0.5em 1em 0;
+	padding: 0.9em 0 0.9em 0.5em;
 	color: #af5f8f;
 	font-size: 1.2em;
-	line-height: 2;
 }
 
 .photo-album {
