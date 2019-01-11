@@ -246,24 +246,17 @@
 		width: 90%;
 	}
 
-	.contacts-icons a {
-		margin: 0.5em -0.1em 0 -0.1em;
-	}
-
-	.prev-slide, .next-slide {
-		padding: 1em 0.5em;
-	}
-}
-
-@media (max-width: 440px) {
 	.contacts-icons, .copyright {
 		margin: 0 auto;
 		float: none;
 	}
 
+	footer {
+		text-align: center;
+	}
+
 	.contacts-icons {
 		width: 100%;
-		text-align: center;
 	}
 
 	.contacts-icons a {
@@ -271,7 +264,7 @@
 	}
 
 	.copyright {
-		width: 11em;
+		width: auto;
 		padding: 0.7em 0;
 	}
 
@@ -282,9 +275,16 @@
 	.copyright p {
 		height: 100%;
 		margin: 0;
-		padding: 0;
+		padding: 0 0 0.2em 0;
+		float: none;
 	}
 
+	.prev-slide, .next-slide {
+		padding: 1em 0.5em;
+	}
+}
+
+@media (max-width: 440px) {
 	.photo-header .navbar {
 		top: -2.3em;
 	}
