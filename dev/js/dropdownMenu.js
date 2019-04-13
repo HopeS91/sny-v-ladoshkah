@@ -5,6 +5,20 @@ if (window.NodeList && !NodeList.prototype.forEach) {
 
 let burger = document.getElementById('burger');
 
+const toggleTubindex = () => {
+	if (window.innerWidth <= 800) {
+		burger.setAttribute('tabindex', '0');
+	} else {
+		burger.setAttribute('tabindex', '-1');
+	}
+}
+
+const toggleBurgerOnKeyDown = event => {
+	if (event.key === 'Enter') {
+    toggleBurger(event);
+  }
+}
+
 const toggleBurger = event => {
 	let parentId = event.target.parentNode.id;
 
@@ -23,7 +37,7 @@ const toggleBurger = event => {
 
 const toggleDropdownMenu = () => {
 	let dropdownMenu = document.getElementById('drop-menu');
-	
+
 	if (dropdownMenu.style.display === 'none' || dropdownMenu.style.display === '') {
 		dropdownMenu.style.display = 'block';
 	} else {
@@ -31,4 +45,5 @@ const toggleDropdownMenu = () => {
 	}
 }
 
+window.addEventListener('resize', toggleTubindex);
 burger.addEventListener('click', toggleBurger);
