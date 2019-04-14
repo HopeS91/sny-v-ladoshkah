@@ -232,10 +232,12 @@
 	}
 
 	#contacts {
+		padding: 0;
 		text-align: center;
 	}
 
 	#contacts p {
+		padding: 1em 0.5em;
 		position: static;
 	}
 
@@ -283,6 +285,9 @@
 }
 
 @media (max-width: 440px) {
+	#contacts p {
+		padding: 0.8em 0.5em;
+	}
 	.photo-header .navbar {
 		top: -2.3em;
 	}
