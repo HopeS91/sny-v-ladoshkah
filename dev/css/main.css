@@ -303,6 +303,7 @@ footer {
 	right: 10px;
 	outline: none;
 	z-index: 20;
+	cursor: pointer;
 }
 
 #close:hover {
