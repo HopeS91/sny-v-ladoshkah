@@ -201,6 +201,8 @@ footer {
 }
 
 .contacts-icons, .copyright {
+	min-height: 3.5em;
+	height: auto;
 	margin: 0 1em;
 }
 
@@ -211,7 +213,7 @@ footer {
 .contacts-icons a {
 	width: 40px;
 	height: 40px;
-	margin: 0.5em -0.4em 0 -0.4em;
+	margin: 0.5em 0;
 	vertical-align: middle;
 }
 
