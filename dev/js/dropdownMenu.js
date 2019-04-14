@@ -6,9 +6,9 @@ if (window.NodeList && !NodeList.prototype.forEach) {
 let burger = document.getElementById('burger');
 
 const toggleTubindex = () => {
-	if (window.innerWidth <= 800) {
+	if (burger && window.innerWidth <= 800) {
 		burger.setAttribute('tabindex', '0');
-	} else {
+	} else if (burger && window.innerWidth > 800) {
 		burger.setAttribute('tabindex', '-1');
 	}
 }
@@ -46,4 +46,7 @@ const toggleDropdownMenu = () => {
 }
 
 window.addEventListener('resize', toggleTubindex);
-burger.addEventListener('click', toggleBurger);
+if (burger) {
+  burger.addEventListener('keydown', toggleBurgerOnKeyDown);
+  burger.addEventListener('click', toggleBurger);
+}
