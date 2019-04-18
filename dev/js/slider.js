@@ -5,8 +5,8 @@ let prevSlide = document.querySelector('.prev-slide');
 let nextSlide = document.querySelector('.next-slide');
 let closeIcon = document.getElementById('close');
 
-let mainSlide = null; // индекс активной картинки
-let start = null; // с какой фотографии начать листать
+let mainSlide = null;
+let start = null;
 
 const showFirstSlideOnKeyDown = event => {
 	if (event.key === 'Enter') {
@@ -28,7 +28,7 @@ const showFirstSlide = event => {
 			slide.style.display = 'block';
 			mainSlide = index;
 			start = index;
-			currentSlide(mainSlide);
+			currentSlide();
 		}
 
 		if (start === 0) {
@@ -51,15 +51,20 @@ const moveSlidesOnKeyDown = event => {
 }
 
 const moveSlides = index => {
+	if ((index === -1 && mainSlide === 0) ||
+			(index === 1 && mainSlide === slides.length - 1)) {
+		index = null;
+	}
+
 	mainSlide += index;
 
-	if (mainSlide < 1) {
+	if (mainSlide === 0) {
 		prevSlide.style.display = 'none';
 	} else {
 		prevSlide.style.display = 'block';
 	}
 
-	if (mainSlide > slides.length - 2) {
+	if (mainSlide === slides.length - 1) {
 		nextSlide.style.display = 'none';
 	} else {
 		nextSlide.style.display = 'block';
@@ -69,7 +74,7 @@ const moveSlides = index => {
 
 	for (let i = start; i < slides.length; i++) {
 		slides[mainSlide].style.display = 'block';
-		currentSlide(mainSlide);
+		currentSlide();
 	}
 }
 
