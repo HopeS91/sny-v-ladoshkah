@@ -3,10 +3,10 @@ let anchorElements = document.querySelectorAll('[href^="#"]');
 function scrollToAnchor(event) {
 	event.preventDefault();
 
-	let speed = 1; // скорость прокрутки
+	let speed = 1
 	let y = window.pageYOffset;
-	let hash = this.href.replace(/[^#]*(.*)/, '$1'); // id элемента, к которому нужно перейти
-	let indent = document.querySelector(hash).getBoundingClientRect().top; // отступ от окна браузера до id
+	let hash = this.href.replace(/[^#]*(.*)/, '$1');
+	let indent = document.querySelector(hash).getBoundingClientRect().top;
 	let start = null;
 
 	requestAnimationFrame(step);
