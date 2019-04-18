@@ -45,8 +45,8 @@ const toggleDropdownMenu = () => {
 	}
 }
 
-window.addEventListener('resize', toggleTubindex);
 if (burger) {
+  window.addEventListener('resize', toggleTubindex);
   burger.addEventListener('keydown', toggleBurgerOnKeyDown);
   burger.addEventListener('click', toggleBurger);
 }
