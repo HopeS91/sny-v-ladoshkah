@@ -28,7 +28,6 @@ const showFirstSlide = event => {
 			slide.style.display = 'block';
 			mainSlide = index;
 			start = index;
-			showSlides();
 			handleArrows();
 		}
 	});
