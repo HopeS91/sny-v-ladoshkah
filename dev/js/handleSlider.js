@@ -1,9 +1,7 @@
-let photoIcons = document.querySelectorAll('.photo-icon');
-let back = document.getElementById('back');
-let slides = document.querySelectorAll('.slide');
-let prevSlide = document.querySelector('.prev-slide');
-let nextSlide = document.querySelector('.next-slide');
-let closeIcon = document.getElementById('close');
+const photoIcons = document.querySelectorAll('.photo-icon');
+const back = document.getElementById('back');
+const slides = document.querySelectorAll('.slide');
+const closeIcon = document.getElementById('close');
 
 let mainSlide = null;
 let start = null;
@@ -42,6 +40,9 @@ const handleArrowsOnKeyDown = event => {
 }
 
 const handleArrows = index => {
+	const prevSlide = document.querySelector('.prev-slide');
+	const nextSlide = document.querySelector('.next-slide');
+	
 	if ((index === -1 && mainSlide === 0) ||
 			(index === 1 && mainSlide === slides.length - 1)) {
 		index = null;

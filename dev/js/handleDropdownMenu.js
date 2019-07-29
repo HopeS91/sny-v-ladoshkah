@@ -3,7 +3,7 @@ if (window.NodeList && !NodeList.prototype.forEach) {
   NodeList.prototype.forEach = Array.prototype.forEach;
 }
 
-let burger = document.getElementById('burger');
+const burger = document.getElementById('burger');
 
 const toggleTubindex = () => {
 	if (burger && window.innerWidth <= 800) {
@@ -36,7 +36,7 @@ const toggleBurger = event => {
 }
 
 const toggleDropdownMenu = () => {
-	let dropdownMenu = document.getElementById('drop-menu');
+	const dropdownMenu = document.getElementById('drop-menu');
 
 	if (dropdownMenu.style.display === 'none' || dropdownMenu.style.display === '') {
 		dropdownMenu.style.display = 'block';
