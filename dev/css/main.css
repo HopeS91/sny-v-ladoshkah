@@ -161,6 +161,7 @@ main {
 
 .portfolio-icon {
 	display: inline-block;
+	margin: 0 0.2em;
 	width: 30%;
 }
 
