@@ -24,7 +24,7 @@ gulp.task('html', function() {
 });
 
 gulp.task('img', function() {
-  return gulp.src('./dev/assets/images/*.*')
+  return gulp.src('./dev/assets/images/**/*.*')
     .pipe(cached('img'))
     .pipe(imagemin())
     .pipe(remember('img'))
