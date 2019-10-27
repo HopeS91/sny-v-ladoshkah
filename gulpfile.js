@@ -53,16 +53,20 @@ gulp.task('build', gulp.series(
 gulp.task('watch', function() {
   const cssWatcher = gulp.watch('./dev/css/*.css', gulp.series('css'));
 
-  cssWatcher.on('unlink', function(event) {
-    delete cached.caches['css'][event.path];
-    remember.forget('css', event.path);
+  cssWatcher.on('change', function(event) {
+    if (event.type === 'deleted') {
+      delete cached.caches['css'][event.path];
+      remember.forget('css', event.path);
+    }
   });
 
   const jsWatcher = gulp.watch('./dev/js/*.js', gulp.series('js'));
 
-  jsWatcher.on('unlink', function(event) {
-    delete cached.caches['js'][event.path];
-    remember.forget('js', event.path);
+  jsWatcher.on('change', function(event) {
+    if (event.type === 'deleted') {
+      delete cached.caches['js'][event.path];
+      remember.forget('js', event.path);
+    }
   });
 
   gulp.watch('./dev/assets/**/*.*', gulp.series('assets'));
