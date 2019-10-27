@@ -16,13 +16,14 @@
 	}
 
 	.photo-header .navbar a {
-		padding: 0.8em 0 0.8em 0.5em;
 		font-size: 1.1em;
+		padding: 0.8em 0 0.8em 0.5em;
 	}
 }
 
 @media (max-width: 900px) {
-	#about, #contacts {
+	#about,
+	#contacts {
 		width: 70%;
 	}
 
@@ -53,33 +54,33 @@
 	}
 
 	#dropdown {
-		width: 100%;
-		height: 4em;
 		background-color: #c471a3;
 		border-bottom: 2px solid #af5f8f;
 		display: inline-block;
+		height: 4em;
+		left: 0;
 		position: absolute;
 		top: 0;
-		left: 0;
+		width: 100%;
 	}
 
 	#burger {
-		width: 2.5em;
+		cursor: pointer;
 		height: 1.5em;
 		position: absolute;
-		top: 1.3em;
 		right: 1em;
-		cursor: pointer;
+		top: 1.3em;
+		width: 2.5em;
 		z-index: 2;
 	}
 
 	#burger span {
-		display: block;
-		width: 100%;
-		height: 3px;
 		background-color: #f9f9f9;
+		display: block;
+		height: 3px;
 		position: absolute;
 		transition: 0.5s;
+		width: 100%;
 	}
 
 	#burger span:first-child {
@@ -96,22 +97,22 @@
 
 	#drop-menu {
 		display: none;
-		width: 100%;
 		padding-top: 4em;
 		position: absolute;
+		width: 100%;
 		z-index: 1;
 	}
 
 	#drop-menu a {
-		text-decoration: none;
-		display: block;
-		padding: 1em;
-		color: #f9f9f9;
-		font-size: 1.2em;
-		font-weight: 400;
-		text-align: center;
 		background-color: #c471a3;
 		border: 1px solid #af5f8f;
+		color: #f9f9f9;
+		display: block;
+		font-size: 1.2em;
+		font-weight: 400;
+		padding: 1em;
+		text-decoration: none;
+		text-align: center;
 	}
 
 	.span-one-active {
@@ -128,11 +129,13 @@
 		transform-origin: 9% 50%;
 	}
 
-	.portfolio-icon, .photo-icon {
+	.portfolio-icon,
+	.photo-icon {
 		width: 45%;
 	}
 
-	#about, #contacts {
+	#about,
+	#contacts {
 		width: 75%;
 	}
 
@@ -144,7 +147,8 @@
 		margin: 0.5em;
 	}
 
-	.prev-slide, .next-slide {
+	.prev-slide,
+	.next-slide {
 		padding: 1em;
 	}
 
@@ -158,21 +162,25 @@
 }
 
 @media (min-width: 641px) {
-	#contacts p:nth-child(1), #contacts p:nth-child(2) {
-		text-align: left;
+	#contacts p:nth-child(1),
+	#contacts p:nth-child(2) {
 		left: 0;
+		text-align: left;
 	}
 
-	#contacts p:nth-child(3), #contacts p:nth-child(4) {
-		text-align: right;
+	#contacts p:nth-child(3),
+	#contacts p:nth-child(4) {
 		right: 0;
+		text-align: right;
 	}
 
-	#contacts p:nth-child(1), #contacts p:nth-child(3) {
+	#contacts p:nth-child(1),
+	#contacts p:nth-child(3) {
 		top: 0;
 	}
 
-	#contacts p:nth-child(2), #contacts p:nth-child(4) {
+	#contacts p:nth-child(2),
+	#contacts p:nth-child(4) {
 		bottom: 0;
 	}
 }
@@ -206,13 +214,14 @@
 		top: 4.3em;
 	}
 
-	.photo-header .navbar, .site-name {
-		width: 100%;
+	.photo-header .navbar,
+	.site-name {
+		box-sizing: border-box;
+		left: 0;
 		margin: 0 auto;
 		padding: 0 1em;
 		text-align: center;
-		left: 0;
-		box-sizing: border-box;
+		width: 100%;
 	}
 
 	.photo-header .navbar {
@@ -227,7 +236,8 @@
 		margin-top: 1.5em;
 	}
 
-	#about, #contacts {
+	#about,
+	#contacts {
 		width: 90%;
 	}
 
@@ -241,13 +251,15 @@
 		position: static;
 	}
 
-	.portfolio-icon, .photo-icon {
+	.portfolio-icon,
+	.photo-icon {
 		width: 90%;
 	}
 
-	.contacts-icons, .copyright {
-		margin: 0 auto;
+	.contacts-icons,
+	.copyright {
 		float: none;
+		margin: 0 auto;
 	}
 
 	footer {
@@ -263,9 +275,9 @@
 	}
 
 	.copyright {
-		width: auto;
 		min-height: auto;
 		padding: 0.7em 0;
+		width: auto;
 	}
 
 	.copyright a {
@@ -273,13 +285,14 @@
 	}
 
 	.copyright p {
+		float: none;
 		height: 100%;
 		margin: 0;
 		padding: 0 0 0.2em 0;
-		float: none;
 	}
 
-	.prev-slide, .next-slide {
+	.prev-slide,
+	.next-slide {
 		padding: 1em 0.5em;
 	}
 }
@@ -315,8 +328,8 @@
 
 @media (max-width: 800px) and (orientation: landscape) {
 	#index .site-name {
-		text-align: right;
 		right: 0;
+		text-align: right;
 	}
 
 	#index .site-name h2 {

@@ -3,10 +3,10 @@ const anchorElements = document.querySelectorAll('[href^="#"]');
 function scrollToAnchor(event) {
 	event.preventDefault();
 
-	let speed = 1
-	let y = window.pageYOffset;
-	let hash = this.href.replace(/[^#]*(.*)/, '$1');
-	let indent = document.querySelector(hash).getBoundingClientRect().top;
+	const speed = 0.8;
+	const y = window.pageYOffset;
+	const hash = this.href.replace(/[^#]*(.*)/, '$1');
+	const indent = document.querySelector(hash).getBoundingClientRect().top;
 	let start = null;
 
 	requestAnimationFrame(step);
@@ -16,22 +16,18 @@ function scrollToAnchor(event) {
 			start = time;
 		}
 
-		let progress = time - start;
+		const progress = time - start;
 		let scroll = null;
 
-		if (indent < 0) {
-			scroll = Math.max(y - progress/speed, y + indent);
-		} else {
+		indent < 0 ?
+			scroll = Math.max(y - progress/speed, y + indent) :
 			scroll = Math.min(y + progress/speed, y + indent);
-		}
 
 		window.scrollTo(0, scroll);
 
-		if (scroll !== y + indent) {
-			requestAnimationFrame(step);
-		} else {
+		scroll !== y + indent ?
+			requestAnimationFrame(step) :
 			location.hash = hash;
-		}
 	}
 }
 

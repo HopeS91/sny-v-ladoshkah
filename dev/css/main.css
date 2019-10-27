@@ -1,15 +1,18 @@
-html, body, .container, #index {
-	width: 100%;
+html,
+body,
+.container,
+#index {
 	height: 100%;
 	margin: 0;
 	padding: 0;
+	width: 100%;
 }
 
 a {
-	text-decoration: none;
-	color: #000;
 	border: none;
+	color: #000;
 	display: inline-block;
+	text-decoration: none;
 }
 
 img {
@@ -17,11 +20,11 @@ img {
 }
 
 .container {
-	min-height: 100%;
-	position: relative;
 	font-family: 'Alegreya Sans', sans-serif;
 	font-weight: 100;
 	letter-spacing: 0.03em;
+	min-height: 100%;
+	position: relative;
 }
 
 header {
@@ -34,11 +37,11 @@ header {
 }
 
 .site-name {
-	margin: 0 1em;
-	text-align: left;
-	position: absolute;
-	top: 1.2em;
 	left: 0;
+	margin: 0 1em;
+	position: absolute;
+	text-align: left;
+	top: 1.2em;
 }
 
 #index .site-name {
@@ -50,10 +53,10 @@ header {
 }
 
 .site-name h1 {
+	line-height: 1;
 	font-family: 'Marck Script', sans-serif;
 	font-size: 3em;
 	font-weight: 400;
-	line-height: 1;
 }
 
 .site-name h2 {
@@ -64,13 +67,13 @@ header {
 .navbar {
 	margin: 0 1em;
 	position: absolute;
-	top: 1em;
 	right: 0;
+	top: 1em;
 }
 
 .navbar a {
-	padding: 1em 0.5em;
 	font-size: 1.2em;
+	padding: 1em 0.5em;
 }
 
 #index .navbar a {
@@ -82,31 +85,33 @@ header {
 	display: none;
 }
 
-#arrow-down, #arrow-up {
-	width: 50px;
-	right: 1em;
+#arrow-down,
+#arrow-up {
 	cursor: pointer;
+	right: 1em;
 	transition: all 0.8s;
+	width: 50px;
 }
 
 #arrow-down {
-	position: absolute;
 	bottom: 0.2em;
+	position: absolute;
 }
 
 #arrow-down:hover {
 	bottom: 0.1em;
 }
 
-#arrow-down img, #arrow-up img {
+#arrow-down img,
+#arrow-up img {
 	width: 100%;
 }
 
 #arrow-up {
-	position: fixed;
 	bottom: 0.8em;
-	z-index: 1;
 	display: none;
+	position: fixed;
+	z-index: 1;
 }
 
 #arrow-up:hover {
@@ -120,31 +125,32 @@ main {
 }
 
 .ornament {
-	width: 90%;
 	margin: 0 auto;
 	padding: 1em 0;
 	text-align: center;
+	width: 90%;
 }
 
 .ornament img {
-	width: 100%;
 	max-width: 1700px;
+	width: 100%;
 }
 
-#about, #portfolio {
+#about,
+#portfolio {
 	margin: 0 auto;
 	padding: 1em 0;
 	text-align: center;
 }
 
 #about {
-	width: 70%;
 	max-width: 60em;
+	width: 70%;
 }
 
 #about p {
-	margin: 0;
 	font-size: 1.1em;
+	margin: 0;
 }
 
 #about .first-letter {
@@ -154,8 +160,8 @@ main {
 }
 
 .portfolio-icon {
-	width: 30%;
 	display: inline-block;
+	width: 30%;
 }
 
 .portfolio-icon img {
@@ -163,24 +169,24 @@ main {
 }
 
 .portfolio-icon h6 {
-	margin: 0 0 1em 0;
 	color: #af5f8f;
 	font-family: 'Marck Script', sans-serif;
 	font-size: 1.3em;
+	margin: 0 0 1em 0;
 }
 
 #contacts {
-	width: 40em;
-	min-height: 5em;
 	margin: 0 auto;
+	min-height: 5em;
 	padding: 1em 0;
 	position: relative;
+	width: 40em;
 }
 
 #contacts p {
+	font-size: 1.1em;
 	margin: 0;
 	padding: 0.5em;
-	font-size: 1.1em;
 	position: absolute;
 }
 
@@ -193,17 +199,18 @@ main {
 }
 
 footer {
-	width: 100%;
-	min-height: 3.5em;
 	background-color: #c471a3;
 	border-top: 2px solid #af5f8f;
+	min-height: 3.5em;
 	position: relative;
+	width: 100%;
 }
 
-.contacts-icons, .copyright {
-	min-height: 3.5em;
+.contacts-icons,
+.copyright {
 	height: auto;
 	margin: 0 1em;
+	min-height: 3.5em;
 }
 
 .contacts-icons {
@@ -211,15 +218,16 @@ footer {
 }
 
 .contacts-icons a {
-	width: 40px;
 	height: 40px;
 	margin: 0.5em 0;
 	vertical-align: middle;
+	width: 40px;
 }
 
-.contacts-icons img, .copyright img {
-	width: 100%;
+.contacts-icons img,
+.copyright img {
 	margin: 0 auto;
+	width: 100%;
 }
 
 .copyright {
@@ -227,18 +235,18 @@ footer {
 }
 
 .copyright a {
-	width: 27px;
 	height: 27px;
 	margin-top: 0.8em;
 	vertical-align: middle;
+	width: 27px;
 }
 
 .copyright p {
-	margin: 1.25em 1em 1em 0.3em;
 	color: #fff;
-	font-size: 0.9em;
-	float: right;
 	display: inline-block;
+	float: right;
+	font-size: 0.9em;
+	margin: 1.25em 1em 1em 0.3em;
 	vertical-align: middle;
 }
 
@@ -255,57 +263,57 @@ footer {
 }
 
 .photo-header .navbar a {
-	padding: 0.9em 0 0.9em 0.5em;
 	color: #af5f8f;
 	font-size: 1.2em;
+	padding: 0.9em 0 0.9em 0.5em;
 }
 
 .photo-album {
-	width: 50em;
 	margin: 0 auto;
 	text-align: center;
+	width: 50em;
 }
 
 .photo-icon {
-	width: 12em;
-	margin: 0.5em 1em;
 	cursor: pointer;
+	margin: 0.5em 1em;
+	width: 12em;
 }
 
 #back {
-	width: 100%;
-	height: 100%;
 	background-color: rgba(0, 0, 0, 0.8);
+	display: none;
+	height: 100%;
+	left: 0;
 	position: fixed;
 	top: 0;
-	left: 0;
+	width: 100%;
 	z-index: 10;
-	display: none;
 }
 
 #front {
-	width: 70%;
+	background-color: rgba(0, 0, 0, 0);
 	height: 100%;
 	margin: 0 auto;
-	background-color: rgba(0, 0, 0, 0);
 	position: relative;
 	top: 0;
+	width: 70%;
 	z-index: 20;
 }
 
 #close {
-	width: 1em;
-	height: 1em;
-	color: #ccc;
-	font-size: 2em;
 	background-color: rgba(0, 0, 0, 0);
 	border: 0;
-	position: absolute;
-	top: 5px;
-	right: 10px;
-	outline: none;
-	z-index: 20;
+	color: #ccc;
 	cursor: pointer;
+	font-size: 2em;
+	height: 1em;
+	outline: none;
+	position: absolute;
+	right: 10px;
+	top: 5px;
+	z-index: 20;
+	width: 1em;
 }
 
 #close:hover {
@@ -313,23 +321,24 @@ footer {
 }
 
 .slide {
-	max-width: 100%;
-	max-height: 80%;
+	bottom: 0;
 	display: none;
 	margin: auto;
-	position: absolute;
-	top: 0;
-	right: 0;
-	bottom: 0;
+	max-height: 80%;
+	max-width: 100%;
 	left: 0;
+	position: absolute;
+	right: 0;
+	top: 0;
 }
 
-.prev-slide, .next-slide {
-	padding: 1em 1.2em;
-	color: #ccc;
-  font-size: 1.5em;
+.prev-slide,
+.next-slide {
 	border-radius: 0.3em;
+	color: #ccc;
 	cursor: pointer;
+  font-size: 1.5em;
+	padding: 1em 1.2em;
 	position: absolute;
 	top: 45%;
 }
@@ -343,21 +352,21 @@ footer {
 }
 
 .dots {
-	width: 100%;
+	bottom: 2.5em;
 	height: 1em;
 	margin: 0 auto;
-	text-align: center;
 	position: relative;
-	bottom: 2.5em;
+	text-align: center;
+	width: 100%;
 	z-index: 20;
 }
 
 .dot {
-	width: 0.5em;
-	height: 0.5em;
-	margin: 0 0.1em;
 	background-color: #ccc;
 	border-radius: 50%;
 	display: inline-block;
+	height: 0.5em;
+	margin: 0 0.1em;
 	vertical-align: middle;
+	width: 0.5em;
 }

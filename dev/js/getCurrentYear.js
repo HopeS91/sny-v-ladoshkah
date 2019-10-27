@@ -1,10 +1,7 @@
 const getTheYear = () => {
   const spanYear = document.getElementById('year');
 
-  const today = new Date();
-  const year = today.getFullYear();
-
-  spanYear.textContent = year;
+  spanYear.textContent = new Date().getFullYear();
 }
 
 window.addEventListener('load', getTheYear);

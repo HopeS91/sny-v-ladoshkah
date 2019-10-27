@@ -7,15 +7,14 @@ let mainSlide = null;
 let start = null;
 
 const showFirstSlideOnKeyDown = event => {
-	if (event.key === 'Enter') {
+	event.key === 'Enter' &&
 		showFirstSlide(event);
-	}
 }
 
 const showFirstSlide = event => {
 	back.style.display = 'block';
 
-	let clickedAlt = event.target.getAttribute('alt');
+	const clickedAlt = event.target.getAttribute('alt');
 	let altToCompare = null;
 
 	slides.forEach((slide, index) => {
@@ -26,23 +25,24 @@ const showFirstSlide = event => {
 			slide.style.display = 'block';
 			mainSlide = index;
 			start = index;
+
 			handleArrows();
 		}
 	});
 }
 
 const handleArrowsOnKeyDown = event => {
-	if (event.key === 'ArrowLeft') {
+	event.key === 'ArrowLeft' &&
 		handleArrows(-1);
-	} else if (event.key === 'ArrowRight') {
+
+	event.key === 'ArrowRight' &&
 		handleArrows(1);
-	}
 }
 
 const handleArrows = index => {
 	const prevSlide = document.querySelector('.prev-slide');
 	const nextSlide = document.querySelector('.next-slide');
-	
+
 	if ((index === -1 && mainSlide === 0) ||
 			(index === 1 && mainSlide === slides.length - 1)) {
 		index = null;
@@ -52,17 +52,13 @@ const handleArrows = index => {
 		mainSlide += index;
 	}
 
-	if (mainSlide === 0) {
-		prevSlide.style.display = 'none';
-	} else {
+	mainSlide === 0 ?
+		prevSlide.style.display = 'none' :
 		prevSlide.style.display = 'block';
-	}
 
-	if (mainSlide === slides.length - 1) {
-		nextSlide.style.display = 'none';
-	} else {
+	mainSlide === slides.length - 1 ?
+		nextSlide.style.display = 'none' :
 		nextSlide.style.display = 'block';
-	}
 
 	showSlides();
 }
@@ -72,12 +68,13 @@ const showSlides = () => {
 
 	for (let i = start; i < slides.length; i++) {
 		slides[mainSlide].style.display = 'block';
+		
 		currentSlide();
 	}
 }
 
 const currentSlide = () => {
-	let dots = document.querySelectorAll('.dot');
+	const dots = document.querySelectorAll('.dot');
 
 	dots.forEach(dot => dot.style.backgroundColor = 'oldlace');
 
@@ -87,9 +84,8 @@ const currentSlide = () => {
 }
 
 const hideSliderOnKeyDown = event => {
-	if (event.key === 'Escape') {
+	event.key === 'Escape' &&
 		hideSlider();
-	}
 }
 
 const hideSlider = () => {

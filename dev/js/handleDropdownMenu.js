@@ -5,48 +5,45 @@ if (window.NodeList && !NodeList.prototype.forEach) {
 
 const burger = document.getElementById('burger');
 
-const toggleTubindex = () => {
-	if (burger && window.innerWidth <= 800) {
-		burger.setAttribute('tabindex', '0');
-	} else if (burger && window.innerWidth > 800) {
-		burger.setAttribute('tabindex', '-1');
-	}
+const toggleTabIndex = () => {
+	window.innerWidth <= 800 ?
+		burger.setAttribute('tabindex', '0') :
+	  burger.setAttribute('tabindex', '-1');
 }
 
 const toggleBurgerOnKeyDown = event => {
-	if (event.key === 'Enter') {
+	event.key === 'Enter' &&
     toggleBurger(event);
-  }
 }
 
 const toggleBurger = event => {
-	let parentId = event.target.parentNode.id;
+  const burgerSpans = document.querySelectorAll('#burger span');
 
-	if (event.target.id === 'burger' || parentId === 'burger') {
-		let burgerSpans = document.querySelectorAll('#burger span');
+  const dropMenu = event.currentTarget.nextElementSibling;
 
-		burgerSpans[0].classList.toggle('span-one-active');
-		burgerSpans[2].classList.toggle('span-three-active');
+	if (dropMenu.style.display !== 'block') {
+		burgerSpans[0].className = 'span-one-active';
+		burgerSpans[2].className = 'span-three-active';
 		setTimeout(() => {
-			burgerSpans[1].classList.toggle('span-two-active');
+			burgerSpans[1].className = 'span-two-active';
 		}, 200);
+  } else {
+    burgerSpans.forEach(span => span.className = '');
+  }
 
-		toggleDropdownMenu();
-	}
+  toggleDropdownMenu();
 }
 
 const toggleDropdownMenu = () => {
 	const dropdownMenu = document.getElementById('drop-menu');
 
-	if (dropdownMenu.style.display === 'none' || dropdownMenu.style.display === '') {
-		dropdownMenu.style.display = 'block';
-	} else {
-		dropdownMenu.style.display = 'none';
-	}
+	dropdownMenu.style.display !== 'block' ?
+		dropdownMenu.style.display = 'block' :
+	  dropdownMenu.style.display = 'none';
 }
 
 if (burger) {
-  window.addEventListener('resize', toggleTubindex);
+  window.addEventListener('resize', toggleTabIndex);
   burger.addEventListener('keydown', toggleBurgerOnKeyDown);
   burger.addEventListener('click', toggleBurger);
 }
