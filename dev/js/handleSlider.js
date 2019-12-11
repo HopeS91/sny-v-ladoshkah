@@ -68,7 +68,7 @@ const showSlides = () => {
 
 	for (let i = start; i < slides.length; i++) {
 		slides[mainSlide].style.display = 'block';
-		
+
 		currentSlide();
 	}
 }
@@ -76,10 +76,10 @@ const showSlides = () => {
 const currentSlide = () => {
 	const dots = document.querySelectorAll('.dot');
 
-	dots.forEach(dot => dot.style.backgroundColor = 'oldlace');
+	dots.forEach(dot => dot.style.backgroundColor = '#ccc');
 
 	for (let i = start; i < dots.length; i++) {
-		dots[mainSlide].style.backgroundColor = 'saddlebrown';
+		dots[mainSlide].style.backgroundColor = '#c471a3';
 	}
 }
 
