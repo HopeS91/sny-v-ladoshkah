@@ -55,7 +55,7 @@
 
 	#dropdown {
 		background-color: #c471a3;
-		border-bottom: 2px solid #af5f8f;
+		border-bottom: 2px solid #853866;
 		display: inline-block;
 		height: 4em;
 		left: 0;
@@ -75,7 +75,7 @@
 	}
 
 	#burger span {
-		background-color: #f9f9f9;
+		background-color: #fff;
 		display: block;
 		height: 3px;
 		position: absolute;
@@ -105,8 +105,8 @@
 
 	#drop-menu a {
 		background-color: #c471a3;
-		border: 1px solid #af5f8f;
-		color: #f9f9f9;
+		border: 1px solid #853866;
+		color: #fff;
 		display: block;
 		font-size: 1.2em;
 		font-weight: 400;
