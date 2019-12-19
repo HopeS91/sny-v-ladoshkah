@@ -1,4 +1,4 @@
-const anchorElements = document.querySelectorAll('[href^="#"]');
+const anchorTags = document.querySelectorAll('[href^="#"]');
 
 function scrollToAnchor(event) {
 	event.preventDefault();
@@ -31,4 +31,4 @@ function scrollToAnchor(event) {
 	}
 }
 
-anchorElements.forEach(anchorElement => anchorElement.addEventListener('click', scrollToAnchor));
+anchorTags.forEach(anchorElement => anchorElement.addEventListener('click', scrollToAnchor));

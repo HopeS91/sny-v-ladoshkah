@@ -9,7 +9,7 @@ const toggleTabIndex = () => {
 	window.innerWidth <= 800 ?
 		burger.setAttribute('tabindex', '0') :
 	  burger.setAttribute('tabindex', '-1');
-}
+};
 
 const toggleBurgerOnKeyDown = event => {
 	event.key === 'Enter' &&
@@ -32,7 +32,7 @@ const toggleBurger = event => {
   }
 
   toggleDropdownMenu();
-}
+};
 
 const toggleDropdownMenu = () => {
 	const dropdownMenu = document.getElementById('drop-menu');
@@ -40,7 +40,7 @@ const toggleDropdownMenu = () => {
 	dropdownMenu.style.display !== 'block' ?
 		dropdownMenu.style.display = 'block' :
 	  dropdownMenu.style.display = 'none';
-}
+};
 
 if (burger) {
   window.addEventListener('resize', toggleTabIndex);

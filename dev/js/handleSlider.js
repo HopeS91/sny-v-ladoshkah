@@ -9,7 +9,7 @@ let start = null;
 const showFirstSlideOnKeyDown = event => {
 	event.key === 'Enter' &&
 		showFirstSlide(event);
-}
+};
 
 const showFirstSlide = event => {
 	back.style.display = 'block';
@@ -29,7 +29,7 @@ const showFirstSlide = event => {
 			handleArrows();
 		}
 	});
-}
+};
 
 const handleArrowsOnKeyDown = event => {
 	event.key === 'ArrowLeft' &&
@@ -37,7 +37,7 @@ const handleArrowsOnKeyDown = event => {
 
 	event.key === 'ArrowRight' &&
 		handleArrows(1);
-}
+};
 
 const handleArrows = index => {
 	const prevSlide = document.querySelector('.prev-slide');
@@ -61,7 +61,7 @@ const handleArrows = index => {
 		nextSlide.style.display = 'block';
 
 	showSlides();
-}
+};
 
 const showSlides = () => {
 	slides.forEach(slide => slide.style.display = 'none');
@@ -71,7 +71,7 @@ const showSlides = () => {
 
 		currentSlide();
 	}
-}
+};
 
 const currentSlide = () => {
 	const dots = document.querySelectorAll('.dot');
@@ -81,18 +81,18 @@ const currentSlide = () => {
 	for (let i = start; i < dots.length; i++) {
 		dots[mainSlide].style.backgroundColor = '#c471a3';
 	}
-}
+};
 
 const hideSliderOnKeyDown = event => {
 	event.key === 'Escape' &&
 		hideSlider();
-}
+};
 
 const hideSlider = () => {
 	mainSlide = null;
 	start = null;
 	back.style.display = 'none';
-}
+};
 
 if (back) {
 	photoIcons.forEach(photo => photo.addEventListener('keydown', showFirstSlideOnKeyDown));
