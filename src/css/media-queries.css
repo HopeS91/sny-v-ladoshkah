@@ -1,10 +1,11 @@
 @media (max-width: 1024px) {
 	.site-name h1 {
 		font-size: 2.5em;
+		margin-bottom: 0.2em;
 	}
 
 	.site-name h2 {
-		font-size: 1em;
+		font-size: 1.05em;
 	}
 
 	.navbar a {
@@ -37,16 +38,21 @@
 		background: url(../../images/DSC_6346--2.jpg) center/cover no-repeat;
 	}
 
-	#index .site-name {
-		top: 5em;
-	}
-
 	#index .navbar {
 		display: none;
 	}
 
 	.photo-header .navbar {
-		top: -3em;
+		box-sizing: border-box;
+		margin: 0 auto;
+		padding: 0 1em;
+		text-align: right;
+		top: 1em;
+		width: 100%;
+	}
+
+	.photo-header .site-name {
+		margin-top: 3em;
 	}
 
 	#dropdown {
@@ -181,34 +187,8 @@
 }
 
 @media (max-width: 640px) {
-	.site-name h2 {
-		padding: 0.5em 0 0 0;
-	}
-
-	#index .site-name {
-		top: 4.3em;
-	}
-
-	.photo-header .navbar,
-	.site-name {
-		box-sizing: border-box;
-		left: 0;
-		margin: 0 auto;
-		padding: 0 1em;
-		text-align: center;
-		width: 100%;
-	}
-
-	.photo-header .navbar {
-		top: -2.5em;
-	}
-
-	.photo-header .navbar a {
-		padding: 1em 0.5em;
-	}
-
-	.photo-header .site-name {
-		margin-top: 1.5em;
+	.site-name h1 {
+		font-size: 2em;
 	}
 
 	#about,
@@ -276,48 +256,24 @@
 	#contacts p {
 		padding: 0.8em 0.5em;
 	}
-	.photo-header .navbar {
-		top: -2.3em;
+
+	.photo-header .site-name {
+		margin-top: 4em;
 	}
 
 	.photo-header .navbar a {
-		padding: 0.3em 0.1em;
+		padding: 0.1em;
 	}
 }
 
 @media (max-width: 340px) {
 	.site-name h1 {
-		font-size: 2.2em;
-	}
-
-	.photo-header .site-name {
-		margin-top: 2em;
+		font-size: 1.7em;
 	}
 }
 
 @media (max-width: 900px) and (orientation: landscape) {
 	.dots {
 		bottom: 1.5em;
-	}
-}
-
-@media (max-width: 800px) and (orientation: landscape) {
-	#index .site-name {
-		right: 0;
-		text-align: right;
-	}
-
-	#index .site-name h2 {
-		padding: 0.5em 0 0 0;
-	}
-}
-
-@media (max-width: 640px) and (orientation: landscape) {
-	#index .site-name {
-		top: 4.3em;
-	}
-
-	#index .site-name h1 {
-		font-size: 2.2em;
 	}
 }

@@ -27,12 +27,9 @@ img {
 	position: relative;
 }
 
-header {
-	min-height: 10em;
-}
-
 #index {
 	background: #853866 url(../../images/DSC_6346--2.jpg) 50% 0%/cover no-repeat;
+	min-height: 10em;
 	overflow: hidden;
 }
 
@@ -256,6 +253,7 @@ footer {
 }
 
 .photo-header {
+	min-height: 11em;
 	position: relative;
 }
 
