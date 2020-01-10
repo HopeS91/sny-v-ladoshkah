@@ -33,10 +33,6 @@
 }
 
 @media (max-width: 800px) {
-	.container {
-		padding-top: 4em;
-	}
-
 	#index {
 		background: url(../../images/DSC_6346--2.jpg) center/cover no-repeat;
 	}
@@ -54,10 +50,7 @@
 	}
 
 	#dropdown {
-		background-color: #c471a3;
-		border-bottom: 1px solid #853866;
 		display: inline-block;
-		height: 4em;
 		left: 0;
 		position: absolute;
 		top: 0;
@@ -66,36 +59,38 @@
 
 	#burger {
 		cursor: pointer;
-		height: 1.5em;
+		height: 20px;
 		position: absolute;
-		right: 1em;
+		right: 1.5em;
 		top: 1.3em;
-		width: 2.5em;
+		width: 35px;
 		z-index: 2;
 	}
 
 	#burger span {
 		background-color: #fff;
 		display: block;
-		height: 3px;
+		height: 2px;
 		position: absolute;
 		transition: 0.5s;
 		width: 100%;
 	}
 
 	#burger span:first-child {
-		top: 0em;
+		top: 0;
 	}
 
 	#burger span:nth-child(2) {
-		top: 0.7em;
+		top: 9px;
 	}
 
 	#burger span:last-child {
-		bottom: 0em;
+		bottom: 0;
 	}
 
 	#drop-menu {
+		background-color: #c471a3;
+		border-bottom: 1px solid #853866;
 		display: none;
 		padding-top: 4em;
 		position: absolute;
@@ -105,7 +100,7 @@
 
 	#drop-menu a {
 		background-color: #c471a3;
-		border: 1px solid #853866;
+		border-top: 1px solid #853866;
 		color: #fff;
 		display: block;
 		font-size: 1.2em;
@@ -186,26 +181,6 @@
 }
 
 @media (max-width: 640px) {
-	.container {
-		padding-top: 3.5em;
-	}
-
-	#dropdown {
-		height: 3.5em;
-	}
-
-	#burger {
-		top: 1em;
-	}
-
-	#drop-menu {
-		padding-top: 3.5em;
-	}
-
-	#drop-menu a {
-		padding: 0.8em 1em;
-	}
-
 	.site-name h2 {
 		padding: 0.5em 0 0 0;
 	}
