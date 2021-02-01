@@ -118,16 +118,16 @@
 
 	.span-one-active {
 		transform: rotate(40deg);
-		transform-origin: 9% 50%;
+		transform-origin: 10% 50%;
 	}
 
-	.span-two-active {
-		display: none !important;
+	#burger .span-two-active {
+		display: none;
 	}
 
 	.span-three-active {
 		transform: rotate(-40deg);
-		transform-origin: 9% 50%;
+		transform-origin: 10% 50%;
 	}
 
 	.portfolio-icon,
